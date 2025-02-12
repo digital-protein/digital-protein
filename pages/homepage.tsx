@@ -10,9 +10,21 @@ const HomePage = () => {
         <div className='min-h-screen bg-black'>
 
             <Head>
-                <title>Digital Protein | 2024</title>
-                <meta name="description" content="" />
-                <meta name="keywords" content="" />
+                <link rel="icon" href="/favicon.ico" type="image/ico" sizes="70x70" />
+                <title>Digital Protein | Innovating the Future</title>
+                <meta name="description" content="Empowering businesses with cutting-edge digital solutions. From web development to cloud infrastructure, Digital Protein transforms your vision into reality." />
+                <meta name="keywords" content="Digital Protein, digital solutions, web development, cloud computing, AI, technology, innovation, business growth" />
+                <meta name="author" content="digitalprotein.in" />
+
+                <meta property="og:title" content="Digital Protein | Innovating the Future" />
+                <meta property="og:description" content="Unlock the potential of your business with Digital Protein’s next-gen digital services, crafted for growth and efficiency." />
+                <meta property="og:image" content="/logo/og-digitalprotein.png" />
+                <meta property="og:url" content="https://www.digitalprotein.in/" />
+
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:title" content="Digital Protein | Innovating the Future" />
+                <meta name="twitter:description" content="Building smart, scalable, and future-ready digital solutions for businesses worldwide." />
+                <meta name="twitter:image" content="/logo/og-digitalprotein.png" />
             </Head>
 
             <Navbar />
@@ -37,7 +49,7 @@ const HomePage = () => {
                         <Image src={'/bg/sphere.svg'} alt='sphere' width={550} height={550} priority={true} />
                     </div>
                 </div>
-                
+
             </div>
 
         </div>
