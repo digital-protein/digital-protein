@@ -4,6 +4,7 @@ import React from 'react';
 import Head from 'next/head';
 import Navbar from '@/components/common/Navbar';
 import Image from 'next/image';
+import Footer from '@/components/common/Footer';
 
 const HomePage = () => {
     return (
@@ -29,7 +30,7 @@ const HomePage = () => {
 
             <Navbar />
 
-            <div className='w-full h-auto flex flex-col gap-6 items-center justify-center mt-6'>
+            <div className='w-full h-auto flex flex-col gap-6 items-center justify-center mt-10 mb-20'>
 
                 <div className='md:w-10/12 w-11/12 h-auto flex md:flex-row flex-col items-center justify-center gap-8'>
                     <div className='md:w-1/2 w-full h-auto flex flex-col items-start justify-center md:gap-10 gap-6'>
@@ -40,7 +41,7 @@ const HomePage = () => {
                             the digital era. Join us in shaping the future of technology.
                         </p>
                         <button
-                            className='px-4 py-2 transition-all bg-transparent hover:bg-[#fff] text-[#fff] hover:text-black text-semibold border-2 border-[#fff] rounded-full'
+                            className='px-6 py-1.5 transition-all bg-transparent hover:bg-[#fff] text-[#fff] hover:text-black text-semibold border-2 border-[#fff] rounded-full'
                         >
                             Explore More
                         </button>
@@ -51,6 +52,8 @@ const HomePage = () => {
                 </div>
 
             </div>
+
+            <Footer />
 
         </div>
     )
