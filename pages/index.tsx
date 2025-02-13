@@ -1,41 +1,60 @@
 'use client';
 
-import Head from "next/head";
-import Image from "next/image";
+import React from 'react';
+import Head from 'next/head';
+import Navbar from '@/components/common/Navbar';
+import Image from 'next/image';
+import Footer from '@/components/common/Footer';
 
 export default function Home() {
     return (
-        <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-            <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-                <Image
-                    src="/logo/logo.svg"
-                    alt="Company logo"
-                    width={280}
-                    height={38}
-                    priority
-                />
-                <ul className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-                    <li>Currently we're under development.</li>
-                </ul>
+        <div className='min-h-screen bg-black'>
 
-            </main>
-            <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-                <a
-                    className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-                    href="mailto:digitalproteinlabs@gmail.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    <Image
-                        aria-hidden
-                        src="/globe.svg"
-                        alt="Globe icon"
-                        width={16}
-                        height={16}
-                    />
-                    Contact Us →
-                </a>
-            </footer>
+            <Head>
+                <link rel="icon" href="/favicon.ico" type="image/ico" sizes="70x70" />
+                <title>Digital Protein | Innovating the Future</title>
+                <meta name="description" content="Empowering businesses with cutting-edge digital solutions. From web development to cloud infrastructure, Digital Protein transforms your vision into reality." />
+                <meta name="keywords" content="Digital Protein, digital solutions, web development, cloud computing, AI, technology, innovation, business growth" />
+                <meta name="author" content="digitalprotein.in" />
+
+                <meta property="og:title" content="Digital Protein | Innovating the Future" />
+                <meta property="og:description" content="Unlock the potential of your business with Digital Protein’s next-gen digital services, crafted for growth and efficiency." />
+                <meta property="og:image" content="/logo/og-digitalprotein.png" />
+                <meta property="og:url" content="https://www.digitalprotein.in/" />
+
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:title" content="Digital Protein | Innovating the Future" />
+                <meta name="twitter:description" content="Building smart, scalable, and future-ready digital solutions for businesses worldwide." />
+                <meta name="twitter:image" content="/logo/og-digitalprotein.png" />
+            </Head>
+
+            <Navbar />
+
+            <div className='w-full h-auto flex flex-col gap-6 items-center justify-center mt-10 mb-20'>
+
+                <div className='md:w-10/12 w-11/12 h-auto flex md:flex-row flex-col items-center justify-center gap-8'>
+                    <div className='md:w-1/2 w-full h-auto flex flex-col items-start justify-center md:gap-10 gap-6'>
+                        <h1 className='md:text-4xl text-xl font-bold text-white'>Revolutionizing Digital Solutions</h1>
+                        <p className='text-lg text-[#818181] text-justify'>
+                            At Digital Protein, we blend innovation and technology to craft powerful digital experiences.
+                            From cutting-edge web solutions to scalable cloud architectures, we help businesses thrive in
+                            the digital era. Join us in shaping the future of technology.
+                        </p>
+                        <button
+                            className='px-6 py-1.5 transition-all bg-transparent hover:bg-[#fff] text-[#fff] hover:text-black text-semibold border-2 border-[#fff] rounded-full'
+                        >
+                            Explore More
+                        </button>
+                    </div>
+                    <div className='w-1/2 h-auto flex items-center justify-center'>
+                        <Image src={'/bg/sphere.svg'} alt='sphere' width={550} height={550} priority={true} />
+                    </div>
+                </div>
+
+            </div>
+
+            <Footer />
+
         </div>
     );
 }

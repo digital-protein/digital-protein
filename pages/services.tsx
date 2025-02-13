@@ -1,30 +1,29 @@
-'use client';
+import Footer from '@/components/common/Footer'
+import Navbar from '@/components/common/Navbar'
+import Head from 'next/head'
+import Image from 'next/image'
+import React from 'react'
 
-import React from 'react';
-import Head from 'next/head';
-import Navbar from '@/components/common/Navbar';
-import Image from 'next/image';
-import Footer from '@/components/common/Footer';
-
-const HomePage = () => {
+const services = () => {
     return (
         <div className='min-h-screen bg-black'>
 
             <Head>
-                <link rel="icon" href="/favicon.ico" type="image/ico" sizes="70x70" />
-                <title>Digital Protein | Innovating the Future</title>
-                <meta name="description" content="Empowering businesses with cutting-edge digital solutions. From web development to cloud infrastructure, Digital Protein transforms your vision into reality." />
-                <meta name="keywords" content="Digital Protein, digital solutions, web development, cloud computing, AI, technology, innovation, business growth" />
-                <meta name="author" content="digitalprotein.in" />
+                <link rel="icon" href="/favicon.ico" type="image/png" sizes="32x32" />
+                <title>Our Services | Digital Protein | Innovating the Future</title>
+                <meta name="description" content="Discover cutting-edge digital solutions from Digital Protein. We specialize in web development, AI, cloud computing, and innovative business technology." />
+                <meta name="keywords" content="Digital Protein, digital transformation, web development, cloud computing, AI solutions, technology consulting, business innovation" />
+                <meta name="author" content="Digital Protein" />
 
-                <meta property="og:title" content="Digital Protein | Innovating the Future" />
-                <meta property="og:description" content="Unlock the potential of your business with Digital Protein’s next-gen digital services, crafted for growth and efficiency." />
+                <meta property="og:title" content="Our Services | Digital Protein | Innovating the Future" />
+                <meta property="og:description" content="Explore Digital Protein’s cutting-edge services in web development, AI, cloud computing, and business technology solutions." />
                 <meta property="og:image" content="/logo/og-digitalprotein.png" />
-                <meta property="og:url" content="https://www.digitalprotein.in/" />
+                <meta property="og:url" content="https://www.digitalprotein.in/services" />
+                <meta property="og:type" content="website" />
 
                 <meta name="twitter:card" content="summary_large_image" />
-                <meta name="twitter:title" content="Digital Protein | Innovating the Future" />
-                <meta name="twitter:description" content="Building smart, scalable, and future-ready digital solutions for businesses worldwide." />
+                <meta name="twitter:title" content="Our Services | Digital Protein | Innovating the Future" />
+                <meta name="twitter:description" content="We build smart, scalable, and future-ready digital solutions tailored to businesses worldwide. Learn more about Digital Protein's expertise." />
                 <meta name="twitter:image" content="/logo/og-digitalprotein.png" />
             </Head>
 
@@ -59,4 +58,4 @@ const HomePage = () => {
     )
 }
 
-export default HomePage
+export default services
