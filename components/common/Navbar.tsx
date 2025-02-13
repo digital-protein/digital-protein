@@ -18,13 +18,13 @@ const Navbar = () => {
             <div className='md:w-10/12 w-11/12 h-auto flex flex-row justify-between items-center relative'>
 
                 <Link href='/' className='cursor-pointer'>
-                    <Image src='/logo/digital-protein.svg' alt='logo tedxsliet' width={200} height={80} className='md:w-28 w-20' />
+                    <Image src='/logo/digital-protein.svg' alt='logo digital protein' width={200} height={80} className='md:w-28 w-20' />
                 </Link>
 
                 <div className='lg:flex hidden flex-row gap-12 text-base font-normal uppercase transition-all'>
                     <span className={`cursor-pointer`} onClick={() => router.push('/')}>Home</span>
                     <span className={`cursor-pointer`} onClick={() => router.push('/services')}>Services</span>
-                    <span className={`cursor-pointer`} onClick={() => router.push('/about-us')}>About Us</span>
+                    <span className={`cursor-pointer`} onClick={() => router.push('/company')}>Company</span>
                     <span className={`cursor-pointer`} onClick={() => router.push('/our-team')}>Our Team</span>
                     <span className={`cursor-pointer`} onClick={() => router.push('/contact-us')}>Contact Us</span>
                 </div>
@@ -38,7 +38,7 @@ const Navbar = () => {
             <div className={`${isActive ? 'flex' : 'hidden'} fixed top-0 left-0 w-full h-[100vh] bg-black text-white transition-all flex-col items-center gap-4`}>
 
                 <div className='md:w-10/12 w-11/12 h-auto flex flex-row justify-between py-6 items-center gap-5 text-base shadow'>
-                    <Image src='/navbar/logo-white.svg' alt='logo tedxsliet' width={300} height={80} className='md:w-80 w-40' />
+                    <Image src='/navbar/logo-white.svg' alt='logo digital protein' width={300} height={80} className='md:w-80 w-40' />
 
                     <div className={`cursor-pointer ${isActive ? 'block' : ''}`} onClick={toggleNavbar}>
                         <Image src='/navbar/cross.svg' alt='dash logo' width={30} height={30} />
@@ -62,9 +62,9 @@ const Navbar = () => {
 
                     <div
                         className={`h-8 w-30 px-3 font-medium text-xl text-left cursor-pointer`}
-                        onClick={() => { router.push('/about-us'); setIsActive(!isActive) }}
+                        onClick={() => { router.push('/company'); setIsActive(!isActive) }}
                     >
-                        About Us
+                        Company
                     </div>
 
                     <div
