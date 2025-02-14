@@ -44,7 +44,7 @@ const ourteam = () => {
                             <div key={index} className='w-96 flex flex-col gap-4'>
                                 <Image src={item.image} alt={item.name} width={300} height={300} className='w-96 h-96 cursor-pointer' />
                                 <div className='flex flex-col items-center justify-center text-center capitalize'>
-                                    <Link href={`/teams/${item.link}`}>
+                                    <Link href={`/our-team/${item.link}`}>
                                         <span className='text-xl font-bold text-white transition-all hover:underline cursor-pointer'>{item.name}</span>
                                     </Link>
                                     <span className='text-lg text-[#FF2B06] cursor-pointer'>{item.position}</span>
