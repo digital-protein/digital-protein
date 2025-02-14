@@ -2,7 +2,6 @@
 
 import React from 'react';
 import Link from 'next/link';
-import Loader from '@/components/common/Loader';
 
 export default function NotFound() {
   return (

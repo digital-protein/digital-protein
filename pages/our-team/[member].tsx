@@ -7,6 +7,7 @@ import { useRouter } from 'next/router';
 import { teams } from '@/components/assets/teams';
 import Navbar from '@/components/common/Navbar';
 import Footer from '@/components/common/Footer';
+import Member404 from '@/components/common/Member/Member404';
 
 const SpeakerDetail = () => {
     const router = useRouter();
@@ -15,7 +16,7 @@ const SpeakerDetail = () => {
     const memberData = teams.find((person) => person.link === member);
 
     if (!memberData) {
-        return <div>Member not found.</div>;
+        return <Member404 />;
     }
 
     return (
