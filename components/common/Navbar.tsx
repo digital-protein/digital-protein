@@ -26,7 +26,7 @@ const Navbar = () => {
                     <span className={`cursor-pointer`} onClick={() => router.push('/services')}>Services</span>
                     <span className={`cursor-pointer`} onClick={() => router.push('/company')}>Company</span>
                     <span className={`cursor-pointer`} onClick={() => router.push('/our-team')}>Our Team</span>
-                    <span className={`cursor-pointer`} onClick={() => router.push('/contact-us')}>Contact Us</span>
+                    <span className={`cursor-pointer`} onClick={() => router.push('/contact')}>Contact Us</span>
                 </div>
 
                 <div className='lg:hidden flex py-1'>
