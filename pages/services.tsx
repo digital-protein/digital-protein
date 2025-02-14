@@ -1,8 +1,10 @@
-import Footer from '@/components/common/Footer'
-import Navbar from '@/components/common/Navbar'
-import Head from 'next/head'
-import Image from 'next/image'
-import React from 'react'
+import React from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
+import Head from 'next/head';
+
+import Footer from '@/components/common/Footer';
+import Navbar from '@/components/common/Navbar';
 
 const services = () => {
     return (

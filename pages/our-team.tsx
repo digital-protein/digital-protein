@@ -1,9 +1,11 @@
-import Footer from '@/components/common/Footer'
-import Navbar from '@/components/common/Navbar'
-import Head from 'next/head'
-import Image from 'next/image'
-import Link from 'next/link'
-import React from 'react'
+import React from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
+import Head from 'next/head';
+
+import Footer from '@/components/common/Footer';
+import Navbar from '@/components/common/Navbar';
+import { teams } from '@/components/assets/teams';
 
 const ourteam = () => {
     return (
@@ -38,33 +40,17 @@ const ourteam = () => {
 
                     <div className='w-full h-auto flex flex-row flex-wrap items-center justify-between'>
 
-                        <div className='w-96 flex flex-col gap-4'>
-                            <Image src='/bg/sphere.svg' alt='sphere' width={300} height={300} className='w-96 h-96 cursor-pointer' />
-                            <div className='flex flex-col items-center justify-center text-center capitalize'>
-                                <Link href={`/our-team`}>
-                                    <span className='text-xl font-bold text-white transition-all hover:underline cursor-pointer'>The Bipu</span>
-                                </Link>
-                                <span className='text-lg text-[#FF2B06] cursor-pointer'>Founder & CEO</span>
+                        {teams.map((item, index) => (
+                            <div key={index} className='w-96 flex flex-col gap-4'>
+                                <Image src={item.image} alt={item.name} width={300} height={300} className='w-96 h-96 cursor-pointer' />
+                                <div className='flex flex-col items-center justify-center text-center capitalize'>
+                                    <Link href={`/teams/${item.link}`}>
+                                        <span className='text-xl font-bold text-white transition-all hover:underline cursor-pointer'>{item.name}</span>
+                                    </Link>
+                                    <span className='text-lg text-[#FF2B06] cursor-pointer'>{item.position}</span>
+                                </div>
                             </div>
-                        </div>
-                        <div className='w-96 flex flex-col gap-4'>
-                            <Image src='/bg/sphere.svg' alt='sphere' width={300} height={300} className='w-96 h-96 cursor-pointer' />
-                            <div className='flex flex-col items-center justify-center text-center capitalize'>
-                                <Link href={`/our-team`}>
-                                    <span className='text-xl font-bold text-white transition-all hover:underline cursor-pointer'>The Bipu</span>
-                                </Link>
-                                <span className='text-lg text-[#FF2B06] cursor-pointer'>Founder & CEO</span>
-                            </div>
-                        </div>
-                        <div className='w-96 flex flex-col gap-4'>
-                            <Image src='/bg/sphere.svg' alt='sphere' width={300} height={300} className='w-96 h-96 cursor-pointer' />
-                            <div className='flex flex-col items-center justify-center text-center capitalize'>
-                                <Link href={`/our-team`}>
-                                    <span className='text-xl font-bold text-white transition-all hover:underline cursor-pointer'>The Bipu</span>
-                                </Link>
-                                <span className='text-lg text-[#FF2B06] cursor-pointer'>Founder & CEO</span>
-                            </div>
-                        </div>
+                        ))}
 
                     </div>
 
