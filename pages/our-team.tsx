@@ -2,6 +2,7 @@ import Footer from '@/components/common/Footer'
 import Navbar from '@/components/common/Navbar'
 import Head from 'next/head'
 import Image from 'next/image'
+import Link from 'next/link'
 import React from 'react'
 
 const ourteam = () => {
@@ -31,23 +32,42 @@ const ourteam = () => {
 
             <div className='w-full h-auto flex flex-col gap-6 items-center justify-center mt-10 mb-20'>
 
+                <h1 className='md:text-5xl text-base font-bold text-white my-6 text-center'>Meet Our Team</h1>
+
                 <div className='md:w-10/12 w-11/12 h-auto flex md:flex-row flex-col items-center justify-center gap-8'>
-                    <div className='md:w-1/2 w-full h-auto flex flex-col items-start justify-center md:gap-10 gap-6'>
-                        <h1 className='md:text-4xl text-xl font-bold text-white'>Revolutionizing Digital Solutions</h1>
-                        <p className='text-lg text-[#818181] text-justify'>
-                            At Digital Protein, we blend innovation and technology to craft powerful digital experiences.
-                            From cutting-edge web solutions to scalable cloud architectures, we help businesses thrive in
-                            the digital era. Join us in shaping the future of technology.
-                        </p>
-                        <button
-                            className='px-6 py-1.5 transition-all bg-transparent hover:bg-[#fff] text-[#fff] hover:text-black text-semibold border-2 border-[#fff] rounded-full'
-                        >
-                            Explore More
-                        </button>
+
+                    <div className='w-full h-auto flex flex-row flex-wrap items-center justify-between'>
+
+                        <div className='w-96 flex flex-col gap-4'>
+                            <Image src='/bg/sphere.svg' alt='sphere' width={300} height={300} className='w-96 h-96 cursor-pointer' />
+                            <div className='flex flex-col items-center justify-center text-center capitalize'>
+                                <Link href={`/our-team`}>
+                                    <span className='text-xl font-bold text-white transition-all hover:underline cursor-pointer'>The Bipu</span>
+                                </Link>
+                                <span className='text-lg text-[#FF2B06] cursor-pointer'>Founder & CEO</span>
+                            </div>
+                        </div>
+                        <div className='w-96 flex flex-col gap-4'>
+                            <Image src='/bg/sphere.svg' alt='sphere' width={300} height={300} className='w-96 h-96 cursor-pointer' />
+                            <div className='flex flex-col items-center justify-center text-center capitalize'>
+                                <Link href={`/our-team`}>
+                                    <span className='text-xl font-bold text-white transition-all hover:underline cursor-pointer'>The Bipu</span>
+                                </Link>
+                                <span className='text-lg text-[#FF2B06] cursor-pointer'>Founder & CEO</span>
+                            </div>
+                        </div>
+                        <div className='w-96 flex flex-col gap-4'>
+                            <Image src='/bg/sphere.svg' alt='sphere' width={300} height={300} className='w-96 h-96 cursor-pointer' />
+                            <div className='flex flex-col items-center justify-center text-center capitalize'>
+                                <Link href={`/our-team`}>
+                                    <span className='text-xl font-bold text-white transition-all hover:underline cursor-pointer'>The Bipu</span>
+                                </Link>
+                                <span className='text-lg text-[#FF2B06] cursor-pointer'>Founder & CEO</span>
+                            </div>
+                        </div>
+
                     </div>
-                    <div className='w-1/2 h-auto flex items-center justify-center'>
-                        <Image src={'/bg/sphere.svg'} alt='sphere' width={550} height={550} priority={true} />
-                    </div>
+
                 </div>
 
             </div>
