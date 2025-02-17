@@ -40,12 +40,12 @@ const contact = () => {
 
             <Navbar />
 
-            <div className='w-full h-auto flex flex-col gap-6 items-center justify-center mt-10 mb-20'>
+            <div className='w-full h-auto flex flex-col gap-6 items-center justify-center mb-20'>
 
                 <div className='flex flex-col items-center justify-center w-full h-auto'>
 
-                    <div className='flex flex-col w-10/12 h-auto justify-center items-center text-center gap-6 my-20'>
-                        <h1 className='md:text-7xl text-4xl font-extrabold text-[#FF2B06]'>Let's Talk</h1>
+                    <div className='flex flex-col w-10/12 h-auto justify-center items-center text-center gap-4 my-20'>
+                        <h1 className='md:text-6xl text-4xl font-extrabold text-[#818181]'>Let's Talk</h1>
                         <div className=' text-[#ffffff] md:text-xl text-base font-light md:leading-loose leading-6'>Have a question, collaboration idea, or want to be part of Digital Protein? Reach out to us!</div>
                     </div>
                     <form className='w-10/12 flex flex-col gap-6 py-10' onSubmit={handleSubmit(onSubmit)}>
@@ -76,7 +76,7 @@ const contact = () => {
                             </div>
                         </div>
                         <div className='flex flex-row gap-4 w-full h-auto justify-end'>
-                            <button type='submit' className='w-40 h-12 rounded flex items-center justify-center px-4 py-2 bg-[#FF2B06] text-white' disabled={submitting}>{submitting ? 'Submitting...' : 'Submit'}</button>
+                            <button type='submit' className='w-40 h-12 rounded flex items-center justify-center px-4 py-2 bg-[#818181] text-white' disabled={submitting}>{submitting ? 'Submitting...' : 'Submit'}</button>
                         </div>
                         {submitSuccess && <p className="text-green-600">Form submitted successfully!</p>}
                     </form>

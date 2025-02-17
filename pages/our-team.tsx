@@ -32,13 +32,16 @@ const ourteam = () => {
 
             <Navbar />
 
-            <div className='w-full h-auto flex flex-col gap-6 items-center justify-center mt-10 mb-20'>
+            <div className='w-full h-auto flex flex-col gap-6 items-center justify-center mb-20'>
 
-                <h1 className='md:text-5xl text-base font-bold text-white my-6 text-center'>Meet Our Team</h1>
+                <div className='flex flex-col items-center justify-center w-full h-auto'>
 
-                <div className='md:w-10/12 w-11/12 h-auto flex md:flex-row flex-col items-center justify-center gap-8'>
+                    <div className='flex flex-col w-10/12 h-auto justify-center items-center text-center gap-4 my-20'>
+                        <h1 className='md:text-6xl text-4xl font-extrabold text-[#818181]'>Meet Our Team</h1>
+                        <div className=' text-[#ffffff] md:text-xl text-base font-light md:leading-loose leading-6'>Have a question, collaboration idea, or want to be part of Digital Protein? Reach out to us!</div>
+                    </div>
 
-                    <div className='w-full h-auto flex flex-row flex-wrap items-center justify-between'>
+                    <div className='w-10/12 h-auto flex flex-row flex-wrap items-center justify-between'>
 
                         {teams.map((item, index) => (
                             <div key={index} className='w-96 flex flex-col gap-4'>
@@ -47,7 +50,7 @@ const ourteam = () => {
                                     <Link href={`/our-team/${item.link}`}>
                                         <span className='text-xl font-bold text-white transition-all hover:underline cursor-pointer'>{item.name}</span>
                                     </Link>
-                                    <span className='text-lg text-[#FF2B06] cursor-pointer'>{item.position}</span>
+                                    <span className='text-lg text-[#818181] cursor-pointer'>{item.position}</span>
                                 </div>
                             </div>
                         ))}
