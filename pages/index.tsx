@@ -6,6 +6,8 @@ import Head from 'next/head';
 
 import Footer from '@/components/common/Footer';
 import Navbar from '@/components/common/Navbar';
+import Link from 'next/link';
+import { domains } from '@/components/assets/domain';
 
 export default function Home() {
     return (
@@ -50,6 +52,31 @@ export default function Home() {
                     <div className='w-1/2 h-auto flex items-center justify-center'>
                         <Image src={'/bg/sphere.svg'} alt='sphere' width={550} height={550} priority={true} />
                     </div>
+                </div>
+
+                <div className='flex flex-col gap-1 items-center justify-center my-10'>
+                    <h2 className='md:text-3xl text-xl font-semibold capitalize'>What we do?</h2>
+                    <p className='text-lg text-[#818181]'>We don’t try to do everything—we specialize in a few domains, ensuring expertise and perfection without any mistakes.</p>
+                </div>
+
+                <div className='md:w-10/12 w-11/12 h-auto flex flex-row flex-wrap items-center justify-center gap-8'>
+
+                    {domains.map((item, index) => (
+                        <div key={index} className='w-[48%] h-56 border border-[#acacac] flex flex-col items-start justify-between p-6'>
+                            <div className='flex flex-col gap-1'>
+                                <h3 className='md:text-3xl text-xl font-bold text-white'>{item.title}</h3>
+                                <p className='text-lg text-[#818181] font-medium'>
+                                    {item.description}
+                                </p>
+                            </div>
+                            <button
+                                className='px-6 py-1.5 transition-all bg-transparent hover:bg-[#fff] text-[#fff] hover:text-black text-semibold border-2 border-[#fff] rounded-full'
+                            >
+                                Explore More
+                            </button>
+                        </div>
+                    ))}
+
                 </div>
 
             </div>
