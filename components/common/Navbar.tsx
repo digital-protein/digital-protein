@@ -1,5 +1,6 @@
 'use client';
 
+import { Cross1Icon, HamburgerMenuIcon } from '@radix-ui/react-icons';
 import Image from 'next/image'
 import Link from 'next/link';
 import { useRouter } from 'next/navigation'
@@ -14,11 +15,11 @@ const Navbar = () => {
     };
 
     return (
-        <div className='w-full h-auto py-4 flex items-center justify-center bg-[#101010]'>
+        <div className='w-full h-auto py-4 flex items-center justify-center z-50 transition-all duration-300 border-b-[1.5px] border-[#E45D25] bg-[#00000080] backdrop-blur-[10px]'>
             <div className='md:w-10/12 w-11/12 h-auto flex flex-row justify-between items-center relative'>
 
                 <Link href='/' className='cursor-pointer'>
-                    <Image src='/logo/digital-protein.svg' alt='logo digital protein' width={200} height={80} className='md:w-28 w-20' />
+                    <Image src='/logo/digital-protein.svg' alt='logo digital protein' width={200} height={80} className='md:w-24 w-20' />
                 </Link>
 
                 <div className='lg:flex hidden flex-row gap-12 text-base font-normal uppercase transition-all'>
@@ -29,20 +30,20 @@ const Navbar = () => {
                     <span className={`cursor-pointer`} onClick={() => router.push('/contact')}>Contact Us</span>
                 </div>
 
-                <div className='lg:hidden flex py-1'>
-                    <Image src='/navbar/dash.svg' alt='dash logo' width={30} height={30} onClick={toggleNavbar} />
+                <div className="lg:hidden flex items-center text-white">
+                    <HamburgerMenuIcon onClick={toggleNavbar} className={isActive ? 'hidden' : 'flex w-5 h-5'} />
                 </div>
 
             </div>
 
             <div className={`${isActive ? 'flex' : 'hidden'} fixed top-0 left-0 w-full h-[100vh] bg-black text-white transition-all flex-col items-center gap-4`}>
 
-                <div className='md:w-10/12 w-11/12 h-auto flex flex-row justify-between py-6 items-center gap-5 text-base shadow'>
-                    <Image src='/navbar/logo-white.svg' alt='logo digital protein' width={300} height={80} className='md:w-80 w-40' />
+                <div className='md:w-10/12 w-11/12 h-auto flex flex-row justify-between py-4 items-center gap-5 text-base shadow'>
+                    <Link href='/' className='cursor-pointer'>
+                        <Image src='/logo/digital-protein.svg' alt='logo digital protein' width={200} height={80} className='w-24' />
+                    </Link>
 
-                    <div className={`cursor-pointer ${isActive ? 'block' : ''}`} onClick={toggleNavbar}>
-                        <Image src='/navbar/cross.svg' alt='dash logo' width={30} height={30} />
-                    </div>
+                    <Cross1Icon className={`cursor-pointer ${isActive ? 'block' : ''}`} onClick={toggleNavbar} />
                 </div>
 
                 <div className='flex flex-col gap-6 items-start w-11/12'>
