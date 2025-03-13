@@ -8,6 +8,7 @@ import Footer from '@/components/common/Footer';
 import Navbar from '@/components/common/Navbar';
 import Link from 'next/link';
 import { domains } from '@/components/assets/domain';
+import { Button } from '@/components/ui/button';
 
 export default function Home() {
     return (
@@ -33,52 +34,44 @@ export default function Home() {
 
             <Navbar />
 
-            <div className='w-full h-auto flex flex-col gap-6 items-center justify-center mt-10 mb-20'>
+            <div className='flex flex-col items-center justify-center w-full h-auto'>
 
-                <div className='md:w-10/12 w-11/12 h-auto flex md:flex-row flex-col items-center justify-center gap-8'>
-                    <div className='md:w-1/2 w-full h-auto flex flex-col items-start justify-center md:gap-10 gap-6'>
-                        <h1 className='md:text-4xl text-xl font-bold text-white'>Revolutionizing Digital Solutions</h1>
-                        <p className='text-lg text-[#818181] text-justify'>
-                            At Digital Protein, we blend innovation and technology to craft powerful digital experiences.
-                            From cutting-edge web solutions to scalable cloud architectures, we help businesses thrive in
-                            the digital era. Join us in shaping the future of technology.
-                        </p>
-                        <button
-                            className='px-6 py-1.5 transition-all bg-transparent hover:bg-[#fff] text-[#fff] hover:text-black text-semibold border-2 border-[#fff] rounded-full'
-                        >
-                            Explore More
-                        </button>
-                    </div>
-                    <div className='w-1/2 h-auto flex items-center justify-center'>
-                        <Image src={'/bg/sphere.svg'} alt='sphere' width={550} height={550} priority={true} />
-                    </div>
-                </div>
+                <div className='w-full h-auto flex items-center justify-center mt-32'>
 
-                <div className='flex flex-col gap-1 items-center justify-center my-10'>
-                    <h2 className='md:text-3xl text-xl font-semibold capitalize'>What we do?</h2>
-                    <p className='text-lg text-[#818181]'>We don’t try to do everything—we specialize in a few domains, ensuring expertise and perfection without any mistakes.</p>
-                </div>
+                    <Image src={'/about/left-line.svg'} alt='sphere' width={384} height={384} className='absolute left-0 top-20 md:h-96 h-64 md:w-24 w-12 pt-8' priority={true} />
+                    <Image src={'/about/right-line.svg'} alt='sphere' width={384} height={384} className='absolute right-0 top-20 md:h-96 h-64 md:w-24 w-12 pt-8' priority={true} />
 
-                <div className='md:w-10/12 w-11/12 h-auto flex flex-row flex-wrap items-center justify-center gap-8'>
-
-                    {domains.map((item, index) => (
-                        <div key={index} className='w-[48%] h-56 border border-[#acacac] flex flex-col items-start justify-between p-6'>
-                            <div className='flex flex-col gap-1'>
-                                <h3 className='md:text-3xl text-xl font-bold text-white'>{item.title}</h3>
-                                <p className='text-lg text-[#818181] font-medium'>
-                                    {item.description}
-                                </p>
-                            </div>
-                            <button
-                                className='px-6 py-1.5 transition-all bg-transparent hover:bg-[#fff] text-[#fff] hover:text-black text-semibold border-2 border-[#fff] rounded-full'
-                            >
-                                Explore More
-                            </button>
+                    <div className='flex flex-col gap-4 items-center justify-center text-center w-10/12 text-white'>
+                        <div className='md:text-xl text-sm font-normal'>Empowering Innovation, Scaling Success.</div>
+                        <div className='md:text-7xl text-xl font-bold'>
+                            <div>Fast-Track Your Success with</div>
+                            <div className='md:text-7xl text-2xl bg-clip-text text-transparent bg-gradient-to-r from-[#175398] to-[#154e8f]'>Global Tech Innovators.</div>
                         </div>
-                    ))}
+                        <div className='md:w-2/3 w-full md:text-xl text-sm mb-4'>Leverage cutting-edge technology, AI-driven insights, and top-tier nearshore talent to accelerate growth and drive business success with OceanzCloud.</div>
+                        <Button variant={'default'} className="relative px-6 py-5 text-base rounded-md transition-all font-normal">
+                            Schedule a Call
+                        </Button>
+
+                        <div className='flex flex-row justify-between flex-wrap mt-10'>
+                            <Image src={'/bg/sphere.svg'} alt='sphere' width={550} height={550} className='md:w-[22%] w-full h-80 object-cover border-4 border-[#1a1a1a] rounded-lg' priority={true} />
+                            <Image src={'/bg/sphere.svg'} alt='sphere' width={550} height={550} className='md:w-[22%] w-full h-80 object-cover border-4 border-[#1a1a1a] rounded-lg' priority={true} />
+                            <Image src={'/bg/sphere.svg'} alt='sphere' width={550} height={550} className='md:w-[22%] w-full h-80 object-cover border-4 border-[#1a1a1a] rounded-lg' priority={true} />
+                            <Image src={'/bg/sphere.svg'} alt='sphere' width={550} height={550} className='md:w-[22%] w-full h-80 object-cover border-4 border-[#1a1a1a] rounded-lg' priority={true} />
+                        </div>
+
+                    </div>
 
                 </div>
 
+                <div className='flex flex-col w-full items-center justify-center py-16'>
+                    <div className='md:text-xl text-base font-normal text-white'>Our Partners</div>
+                    <div className='w-10/12 flex flex-row flex-wrap md:gap-0 gap-8 md:justify-between justify-center items-center pt-10'>
+                        <Image src={'/logo.png'} alt='sphere' width={550} height={550} className='w-[22%] h-auto object-cover p-6 serviceCard' priority={true} />
+                        <Image src={'/logo.png'} alt='sphere' width={550} height={550} className='w-[22%] h-auto object-cover p-6 serviceCard' priority={true} />
+                        <Image src={'/logo.png'} alt='sphere' width={550} height={550} className='w-[22%] h-auto object-cover p-6 serviceCard' priority={true} />
+                        <Image src={'/logo.png'} alt='sphere' width={550} height={550} className='w-[22%] h-auto object-cover p-6 serviceCard' priority={true} />
+                    </div>
+                </div>
             </div>
 
             <Footer />
