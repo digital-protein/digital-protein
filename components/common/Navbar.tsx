@@ -30,8 +30,6 @@ const Navbar = () => {
 
                 <nav className="text-white text-center lg:flex hidden lg:w-auto lg:space-x-8 justify-between items-center w-[55%]">
                     <Link href={'/services'} className="cursor-pointer hover:text-[#E45D25]">Services</Link>
-                    <Link href={'/industries'} className="cursor-pointer hover:text-[#E45D25]">Industries</Link>
-                    <Link href={'/portfolio'} className="cursor-pointer hover:text-[#E45D25]">Portfolio</Link>
                     <Link href={'/company'} className="cursor-pointer hover:text-[#E45D25]">Company</Link>
                     <Link href={'/insights'} className="cursor-pointer hover:text-[#E45D25]">Insights</Link>
                     <Link href={'/career'} className="cursor-pointer hover:text-[#E45D25]">Career</Link>
