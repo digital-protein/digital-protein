@@ -36,7 +36,12 @@ export default function Home() {
 
             <div className='flex flex-col items-center justify-center w-full h-auto'>
 
-                <div className='w-full h-auto flex items-center justify-center mt-32'>
+                <div className='w-full h-auto flex items-center justify-center pt-32 pb-24'
+                    style={{
+                        backgroundImage: "url('/bg/texture.jpg')",
+                        backgroundRepeat: "no-repeat",
+                    }}
+                >
 
                     <Image src={'/about/left-line.svg'} alt='sphere' width={384} height={384} className='absolute left-0 top-20 md:h-96 h-64 md:w-24 w-12 pt-8' priority={true} />
                     <Image src={'/about/right-line.svg'} alt='sphere' width={384} height={384} className='absolute right-0 top-20 md:h-96 h-64 md:w-24 w-12 pt-8' priority={true} />
@@ -63,15 +68,42 @@ export default function Home() {
 
                 </div>
 
-                <div className='flex flex-col w-full items-center justify-center py-16'>
-                    <div className='md:text-xl text-base font-normal text-white'>Our Partners</div>
-                    <div className='w-10/12 flex flex-row flex-wrap md:gap-0 gap-8 md:justify-between justify-center items-center pt-10'>
-                        <Image src={'/logo.png'} alt='sphere' width={550} height={550} className='w-[22%] h-auto object-cover p-6 serviceCard' priority={true} />
-                        <Image src={'/logo.png'} alt='sphere' width={550} height={550} className='w-[22%] h-auto object-cover p-6 serviceCard' priority={true} />
-                        <Image src={'/logo.png'} alt='sphere' width={550} height={550} className='w-[22%] h-auto object-cover p-6 serviceCard' priority={true} />
-                        <Image src={'/logo.png'} alt='sphere' width={550} height={550} className='w-[22%] h-auto object-cover p-6 serviceCard' priority={true} />
+                <div className='w-full h-auto flex flex-col items-center justify-center pt-24 pb-24 bg-white text-black'>
+                    <div className='md:w-10/12 w-11/12 h-auto flex flex-col gap-24'>
+                        <div className='w-full flex flex-col'>
+                            <div className='text-blue-600 font-normal mb-2'>Our Trusted Partners</div>
+                            <div className='md:text-3xl text-2xl font-semibold mb-4'>Companies We've Collaborated With</div>
+                        </div>
+
+                        <div className='flex flex-row flex-wrap items-center justify-center'>
+                            <div className='md:w-1/4 w-auto h-52 px-10 flex items-center justify-center border border-gray-900'>
+                                <Image src={'/logo.png'} alt='company icon' width={120} height={120} className='w-44' />
+                            </div>
+                            <div className='md:w-1/4 w-auto h-52 px-10 flex items-center justify-center border border-gray-900'>
+                                <Image src={'/logo.png'} alt='company icon' width={120} height={120} className='w-44' />
+                            </div>
+                            <div className='md:w-1/4 w-auto h-52 px-10 flex items-center justify-center border border-gray-900'>
+                                <Image src={'/logo.png'} alt='company icon' width={120} height={120} className='w-44' />
+                            </div>
+                            <div className='md:w-1/4 w-auto h-52 px-10 flex items-center justify-center border border-gray-900'>
+                                <Image src={'/logo.png'} alt='company icon' width={120} height={120} className='w-44' />
+                            </div>
+                            <div className='md:w-1/4 w-auto h-52 px-10 flex items-center justify-center border border-gray-900'>
+                                <Image src={'/logo.png'} alt='company icon' width={120} height={120} className='w-44' />
+                            </div>
+                            <div className='md:w-1/4 w-auto h-52 px-10 flex items-center justify-center border border-gray-900'>
+                                <Image src={'/logo.png'} alt='company icon' width={120} height={120} className='w-44' />
+                            </div>
+                            <div className='md:w-1/4 w-auto h-52 px-10 flex items-center justify-center border border-gray-900'>
+                                <Image src={'/logo.png'} alt='company icon' width={120} height={120} className='w-44' />
+                            </div>
+                            <div className='md:w-1/4 w-auto h-52 px-10 flex items-center justify-center border border-gray-900'>
+                                <Image src={'/logo.png'} alt='company icon' width={120} height={120} className='w-44' />
+                            </div>
+                        </div>
                     </div>
                 </div>
+
             </div>
 
             <Footer />
