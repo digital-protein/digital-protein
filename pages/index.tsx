@@ -68,8 +68,8 @@ export default function Home() {
 
                 </div>
 
-                <div className='w-full h-auto flex flex-col items-center justify-center pt-24 pb-24 bg-white text-black'>
-                    <div className='md:w-10/12 w-11/12 h-auto flex flex-col gap-24'>
+                <div className='w-full h-auto flex flex-col items-center justify-center pt-24 pb-24 bg-black text-white'>
+                    <div className='md:w-10/12 w-11/12 h-auto flex flex-col gap-12'>
                         <div className='w-full flex flex-col'>
                             <div className='text-blue-600 font-normal mb-2'>Our Trusted Partners</div>
                             <div className='md:text-3xl text-2xl font-semibold mb-4'>Companies We've Collaborated With</div>
@@ -77,28 +77,28 @@ export default function Home() {
 
                         <div className='flex flex-row flex-wrap items-center justify-center'>
                             <div className='md:w-1/4 w-auto h-52 px-10 flex items-center justify-center border border-gray-900'>
-                                <Image src={'/logo.png'} alt='company icon' width={120} height={120} className='w-44' />
+                                <Image src={'/bg/sphere.svg'} alt='company icon' width={120} height={120} className='w-44' />
                             </div>
                             <div className='md:w-1/4 w-auto h-52 px-10 flex items-center justify-center border border-gray-900'>
-                                <Image src={'/logo.png'} alt='company icon' width={120} height={120} className='w-44' />
+                                <Image src={'/bg/sphere.svg'} alt='company icon' width={120} height={120} className='w-44' />
                             </div>
                             <div className='md:w-1/4 w-auto h-52 px-10 flex items-center justify-center border border-gray-900'>
-                                <Image src={'/logo.png'} alt='company icon' width={120} height={120} className='w-44' />
+                                <Image src={'/bg/sphere.svg'} alt='company icon' width={120} height={120} className='w-44' />
                             </div>
                             <div className='md:w-1/4 w-auto h-52 px-10 flex items-center justify-center border border-gray-900'>
-                                <Image src={'/logo.png'} alt='company icon' width={120} height={120} className='w-44' />
+                                <Image src={'/bg/sphere.svg'} alt='company icon' width={120} height={120} className='w-44' />
                             </div>
                             <div className='md:w-1/4 w-auto h-52 px-10 flex items-center justify-center border border-gray-900'>
-                                <Image src={'/logo.png'} alt='company icon' width={120} height={120} className='w-44' />
+                                <Image src={'/bg/sphere.svg'} alt='company icon' width={120} height={120} className='w-44' />
                             </div>
                             <div className='md:w-1/4 w-auto h-52 px-10 flex items-center justify-center border border-gray-900'>
-                                <Image src={'/logo.png'} alt='company icon' width={120} height={120} className='w-44' />
+                                <Image src={'/bg/sphere.svg'} alt='company icon' width={120} height={120} className='w-44' />
                             </div>
                             <div className='md:w-1/4 w-auto h-52 px-10 flex items-center justify-center border border-gray-900'>
-                                <Image src={'/logo.png'} alt='company icon' width={120} height={120} className='w-44' />
+                                <Image src={'/bg/sphere.svg'} alt='company icon' width={120} height={120} className='w-44' />
                             </div>
                             <div className='md:w-1/4 w-auto h-52 px-10 flex items-center justify-center border border-gray-900'>
-                                <Image src={'/logo.png'} alt='company icon' width={120} height={120} className='w-44' />
+                                <Image src={'/bg/sphere.svg'} alt='company icon' width={120} height={120} className='w-44' />
                             </div>
                         </div>
                     </div>
