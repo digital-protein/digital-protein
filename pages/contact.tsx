@@ -7,6 +7,7 @@ import { useForm } from 'react-hook-form';
 import Footer from '@/components/common/Footer';
 import Navbar from '@/components/common/Navbar';
 import { UserContext } from '@/context/userContext';
+import { Button } from '@/components/ui/button';
 
 const contact = () => {
     const { setCurrentTab } = useContext(UserContext);
@@ -47,15 +48,15 @@ const contact = () => {
 
             <Navbar />
 
-            <div className='w-full h-auto flex flex-col gap-6 items-center justify-center pb-20 pt-32'>
+            <div
+                className='w-full h-auto flex flex-col gap-6 items-center justify-center pb-20 pt-32'
+                style={{
+                    backgroundImage: "url('/bg/texture.jpg')",
+                    backgroundRepeat: "no-repeat",
+                }}
+            >
 
-                <div
-                    className='flex flex-col items-center justify-center w-full h-auto'
-                    style={{
-                        backgroundImage: "url('/bg/texture.jpg')",
-                        backgroundRepeat: "no-repeat",
-                    }}
-                >
+                <div className='flex flex-col items-center justify-center w-full h-auto'>
 
                     <div className='flex flex-col w-10/12 h-auto justify-center items-center text-center gap-4'>
                         <h1 className='md:text-7xl text-4xl font-bold text-[#fff]'>Let's Talk</h1>
@@ -89,7 +90,7 @@ const contact = () => {
                             </div>
                         </div>
                         <div className='flex flex-row gap-4 w-full h-auto justify-end'>
-                            <button type='submit' className='w-40 h-12 rounded flex items-center justify-center px-4 py-2 bg-[#818181] text-white' disabled={submitting}>{submitting ? 'Submitting...' : 'Submit'}</button>
+                            <Button variant={'manual'} type='submit' className='w-40 h-12 rounded flex items-center justify-center px-4 py-2' disabled={submitting}>{submitting ? 'Submitting...' : 'Submit'}</Button>
                         </div>
                         {submitSuccess && <p className="text-green-600">Form submitted successfully!</p>}
                     </form>
