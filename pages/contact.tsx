@@ -47,11 +47,11 @@ const contact = () => {
 
             <Navbar />
 
-            <div className='w-full h-auto flex flex-col gap-6 items-center justify-center mb-20'>
+            <div className='w-full h-auto flex flex-col gap-6 items-center justify-center pb-20 pt-32'>
 
                 <div className='flex flex-col items-center justify-center w-full h-auto'>
 
-                    <div className='flex flex-col w-10/12 h-auto justify-center items-center text-center gap-4 my-20'>
+                    <div className='flex flex-col w-10/12 h-auto justify-center items-center text-center gap-4'>
                         <h1 className='md:text-6xl text-4xl font-extrabold text-[#818181]'>Let's Talk</h1>
                         <div className=' text-[#ffffff] md:text-xl text-base font-light md:leading-loose leading-6'>Have a question, collaboration idea, or want to be part of Digital Protein? Reach out to us!</div>
                     </div>
@@ -59,27 +59,27 @@ const contact = () => {
                         <div className='flex md:flex-row flex-col md:gap-10 gap-6'>
                             <div className='md:w-1/2 w-full flex flex-col items-start justify-center gap-1'>
                                 <label htmlFor="fName" className='text-[#fff] text-sm'>First Name</label>
-                                <input {...register('fName')} type="text" id='fName' name='fName' className='w-full border-2 border-[#cbcbcb] p-4 rounded-md outline-none text-black font-medium text-base' required />
+                                <input {...register('fName')} type="text" id='fName' name='fName' className='w-full border-2 border-[#cbcbcb] p-4 rounded-md outline-none text-black bg-gray-200 font-medium text-base' required />
                             </div>
                             <div className='md:w-1/2 w-full flex flex-col items-start justify-center gap-1'>
                                 <label htmlFor="lName" className='text-[#fff] text-sm'>Last Name</label>
-                                <input {...register('lName')} type="text" id='lName' name='lName' className='w-full border-2 border-[#cbcbcb] p-4 rounded-md outline-none text-black font-medium text-base' required />
+                                <input {...register('lName')} type="text" id='lName' name='lName' className='w-full border-2 border-[#cbcbcb] p-4 rounded-md outline-none text-black bg-gray-200 font-medium text-base' required />
                             </div>
                         </div>
                         <div className='flex md:flex-row flex-col md:gap-10 gap-6'>
                             <div className='md:w-1/2 w-full flex flex-col items-start justify-center gap-1'>
                                 <label htmlFor="email" className='text-[#fff] text-sm'>Email</label>
-                                <input {...register('email')} type="email" id='email' name='email' className='w-full border-2 border-[#cbcbcb] p-4 rounded-md outline-none text-black font-medium text-base' required />
+                                <input {...register('email')} type="email" id='email' name='email' className='w-full border-2 border-[#cbcbcb] p-4 rounded-md outline-none text-black bg-gray-200 font-medium text-base' required />
                             </div>
                             <div className='md:w-1/2 w-full flex flex-col items-start justify-center gap-1'>
                                 <label htmlFor="phone" className='text-[#fff] text-sm'>Phone Number</label>
-                                <input {...register('phone')} type="text" id='phone' name='phone' className='w-full border-2 border-[#cbcbcb] p-4 rounded-md outline-none text-black font-medium text-base' required />
+                                <input {...register('phone')} type="text" id='phone' name='phone' className='w-full border-2 border-[#cbcbcb] p-4 rounded-md outline-none text-black bg-gray-200 font-medium text-base' required />
                             </div>
                         </div>
                         <div className='flex flex-row gap-10'>
                             <div className='w-full flex flex-col items-start justify-center gap-1'>
                                 <label htmlFor="textArea" className='text-[#fff] text-sm'>Tell us more about your inquiry</label>
-                                <textarea {...register('textArea')} id="textArea" cols={30} rows={10} className='w-full border-2 border-[#cbcbcb] p-4 rounded-md outline-none text-black font-medium text-base'></textarea>
+                                <textarea {...register('textArea')} id="textArea" cols={30} rows={10} className='w-full border-2 border-[#cbcbcb] p-4 rounded-md outline-none text-black bg-gray-200 font-medium text-base'></textarea>
                             </div>
                         </div>
                         <div className='flex flex-row gap-4 w-full h-auto justify-end'>

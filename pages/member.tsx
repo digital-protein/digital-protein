@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import Head from 'next/head';
@@ -6,8 +6,15 @@ import Head from 'next/head';
 import Footer from '@/components/common/Footer';
 import Navbar from '@/components/common/Navbar';
 import { teams } from '@/components/assets/teams';
+import { UserContext } from '@/context/userContext';
 
-const ourteam = () => {
+const OurTeam = () => {
+    const { setCurrentTab } = useContext(UserContext);
+
+    useEffect(() => {
+        setCurrentTab('teams');
+    }, [setCurrentTab]);
+
     return (
         <div className='min-h-screen bg-black'>
 
@@ -67,4 +74,4 @@ const ourteam = () => {
     )
 }
 
-export default ourteam
+export default OurTeam
