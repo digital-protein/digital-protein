@@ -24,13 +24,7 @@ const contact = () => {
     }, [setCurrentTab]);
 
     return (
-        <div
-            className='min-h-screen'
-            style={{
-                backgroundImage: "url('/bg/texture.jpg')",
-                backgroundRepeat: "no-repeat",
-            }}
-        >
+        <div className='min-h-screen bg-black'>
 
             <Head>
                 <link rel="icon" href="/favicon.ico" type="image/png" sizes="32x32" />
@@ -55,7 +49,13 @@ const contact = () => {
 
             <div className='w-full h-auto flex flex-col gap-6 items-center justify-center pb-20 pt-32'>
 
-                <div className='flex flex-col items-center justify-center w-full h-auto'>
+                <div
+                    className='flex flex-col items-center justify-center w-full h-auto'
+                    style={{
+                        backgroundImage: "url('/bg/texture.jpg')",
+                        backgroundRepeat: "no-repeat",
+                    }}
+                >
 
                     <div className='flex flex-col w-10/12 h-auto justify-center items-center text-center gap-4'>
                         <h1 className='md:text-7xl text-4xl font-bold text-[#fff]'>Let's Talk</h1>
