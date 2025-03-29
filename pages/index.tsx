@@ -1,16 +1,21 @@
 'use client';
 
-import React from 'react';
+import React, { useContext, useEffect } from 'react';
 import Image from 'next/image';
 import Head from 'next/head';
 
 import Footer from '@/components/common/Footer';
 import Navbar from '@/components/common/Navbar';
-import Link from 'next/link';
-import { domains } from '@/components/assets/domain';
 import { Button } from '@/components/ui/button';
+import { UserContext } from '@/context/userContext';
 
 export default function Home() {
+    const { setCurrentTab } = useContext(UserContext);
+
+    useEffect(() => {
+      setCurrentTab('home');
+    }, [setCurrentTab]);
+
     return (
         <div className='min-h-screen bg-black'>
 

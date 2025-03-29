@@ -1,13 +1,16 @@
 'use client'
 
-import React, { useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import Head from 'next/head';
 import { useForm } from 'react-hook-form';
 
 import Footer from '@/components/common/Footer';
 import Navbar from '@/components/common/Navbar';
+import { UserContext } from '@/context/userContext';
 
 const contact = () => {
+    const { setCurrentTab } = useContext(UserContext);
+
     const { register, handleSubmit, reset } = useForm();
     const [submitting, setSubmitting] = useState(false);
     const [submitSuccess, setSubmitSuccess] = useState(false);
@@ -15,6 +18,10 @@ const contact = () => {
     const onSubmit = async (data: any) => {
         console.log(data);
     };
+
+    useEffect(() => {
+        setCurrentTab('contact');
+    }, [setCurrentTab]);
 
     return (
         <div className='min-h-screen bg-black'>

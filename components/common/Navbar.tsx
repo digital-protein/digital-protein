@@ -4,19 +4,22 @@ import { Cross1Icon, HamburgerMenuIcon } from '@radix-ui/react-icons';
 import Image from 'next/image'
 import Link from 'next/link';
 import { useRouter } from 'next/navigation'
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { Button } from '../ui/button';
+import { UserContext } from '@/context/userContext';
 
 const Navbar = () => {
     const router = useRouter();
+    const { currentTab } = useContext(UserContext);
 
     const [isActive, setIsActive] = useState(false);
+
     const toggleNavbar = () => {
         setIsActive(!isActive);
     };
 
     return (
-        <header className="fixed top-0 left-0 w-full py-4 flex justify-center items-center z-50 transition-all duration-300 border-b-[1.5px] border-[#E45D25] bg-[#00000080] backdrop-blur-[10px]">
+        <header className="fixed top-0 left-0 w-full py-4 flex justify-center items-center z-50 transition-all duration-300 border-b-2 border-[#175398] bg-[#00000080] backdrop-blur-[10px]">
 
             <div className='flex flex-row justify-between items-center w-10/12 h-full'>
                 <Link href={'/'}>
@@ -29,10 +32,10 @@ const Navbar = () => {
                 </div>
 
                 <nav className="text-white text-center lg:flex hidden lg:w-auto lg:space-x-8 justify-between items-center w-[55%]">
-                    <Link href={'/services'} className="cursor-pointer hover:text-[#E45D25]">Services</Link>
-                    <Link href={'/company'} className="cursor-pointer hover:text-[#E45D25]">Company</Link>
-                    <Link href={'/insights'} className="cursor-pointer hover:text-[#E45D25]">Insights</Link>
-                    <Link href={'/career'} className="cursor-pointer hover:text-[#E45D25]">Career</Link>
+                    <Link href={'/services'} className={`${currentTab === 'service' && 'text-[#175398]'} cursor-pointer hover:text-[#175398]`}>Services</Link>
+                    <Link href={'/company'} className={`${currentTab === 'company' && 'text-[#175398]'} cursor-pointer hover:text-[#175398]`}>Company</Link>
+                    <Link href={'/portfolio'} className={`${currentTab === 'portfolio' && 'text-[#175398]'} cursor-pointer hover:text-[#175398]`}>Portfolio</Link>
+                    <Link href={'/career'} className={`${currentTab === 'career' && 'text-[#175398]'} cursor-pointer hover:text-[#175398]`}>Career</Link>
                 </nav>
 
                 <Link href='/contact' className="hidden lg:block">
@@ -52,41 +55,54 @@ const Navbar = () => {
                     <Cross1Icon className={`cursor-pointer ${isActive ? 'block' : ''}`} onClick={toggleNavbar} />
                 </div>
 
-                <div className='flex flex-col gap-6 items-start w-11/12'>
-                    <div
-                        className={`h-8 w-30 px-3 font-medium text-xl text-left cursor-pointer`}
+                <div className='flex flex-col gap-3 items-start w-10/12'>
+                    <Button
+                        variant={currentTab === 'home' ? 'manual' : 'outline'}
+                        className='w-full cursor-pointer'
                         onClick={() => { router.push('/'); setIsActive(!isActive) }}
                     >
                         Home
-                    </div>
+                    </Button>
 
-                    <div
-                        className={`h-8 w-30 px-3 font-medium text-xl text-left cursor-pointer`}
+                    <Button
+                        variant={currentTab === 'service' ? 'manual' : 'outline'}
+                        className='w-full cursor-pointer'
                         onClick={() => { router.push('/services'); setIsActive(!isActive) }}
                     >
                         Services
-                    </div>
+                    </Button>
 
-                    <div
-                        className={`h-8 w-30 px-3 font-medium text-xl text-left cursor-pointer`}
+                    <Button
+                        variant={currentTab === 'portfolio' ? 'manual' : 'outline'}
+                        className='w-full cursor-pointer'
+                        onClick={() => { router.push('/portfolio'); setIsActive(!isActive) }}
+                    >
+                        Portfolio
+                    </Button>
+
+                    <Button
+                        variant={currentTab === 'company' ? 'manual' : 'outline'}
+                        className='w-full cursor-pointer'
                         onClick={() => { router.push('/company'); setIsActive(!isActive) }}
                     >
                         Company
-                    </div>
+                    </Button>
 
-                    <div
-                        className={`h-8 w-30 px-3 font-medium text-xl text-left cursor-pointer`}
-                        onClick={() => { router.push('/our-team'); setIsActive(!isActive) }}
+                    <Button
+                        variant={currentTab === 'career' ? 'manual' : 'outline'}
+                        className='w-full cursor-pointer'
+                        onClick={() => { router.push('/career'); setIsActive(!isActive) }}
                     >
-                        Our Team
-                    </div>
+                        Career
+                    </Button>
 
-                    <div
-                        className={`h-8 w-30 px-3 font-medium text-xl text-left cursor-pointerm'}`}
+                    <Button
+                        variant={currentTab === 'contact' ? 'manual' : 'outline'}
+                        className='w-full cursor-pointer'
                         onClick={() => { router.push('/contact'); setIsActive(!isActive) }}
                     >
                         Contact Us
-                    </div>
+                    </Button>
                 </div>
 
             </div>
