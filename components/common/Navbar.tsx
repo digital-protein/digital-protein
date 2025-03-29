@@ -19,7 +19,7 @@ const Navbar = () => {
     };
 
     return (
-        <header className="fixed top-0 left-0 w-full py-4 flex justify-center items-center z-50 transition-all duration-300 border-b-2 border-[#175398] bg-[#00000080] backdrop-blur-[10px]">
+        <header className="fixed top-0 left-0 w-full py-4 flex justify-center items-center z-50 transition-all duration-300 border-b-2 border-[#175398] bg-[#00000080] backdrop-blur-[3px]">
 
             <div className='flex flex-row justify-between items-center w-10/12 h-full'>
                 <Link href={'/'}>

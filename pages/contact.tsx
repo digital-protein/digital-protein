@@ -24,7 +24,13 @@ const contact = () => {
     }, [setCurrentTab]);
 
     return (
-        <div className='min-h-screen bg-black'>
+        <div
+            className='min-h-screen'
+            style={{
+                backgroundImage: "url('/bg/texture.jpg')",
+                backgroundRepeat: "no-repeat",
+            }}
+        >
 
             <Head>
                 <link rel="icon" href="/favicon.ico" type="image/png" sizes="32x32" />
@@ -52,7 +58,7 @@ const contact = () => {
                 <div className='flex flex-col items-center justify-center w-full h-auto'>
 
                     <div className='flex flex-col w-10/12 h-auto justify-center items-center text-center gap-4'>
-                        <h1 className='md:text-6xl text-4xl font-extrabold text-[#818181]'>Let's Talk</h1>
+                        <h1 className='md:text-7xl text-4xl font-bold text-[#fff]'>Let's Talk</h1>
                         <div className=' text-[#ffffff] md:text-xl text-base font-light md:leading-loose leading-6'>Have a question, collaboration idea, or want to be part of Digital Protein? Reach out to us!</div>
                     </div>
                     <form className='w-10/12 flex flex-col gap-6 py-10' onSubmit={handleSubmit(onSubmit)}>

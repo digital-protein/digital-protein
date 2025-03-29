@@ -40,7 +40,13 @@ const services = () => {
 
             <div className='w-full h-auto flex flex-col gap-6 items-center justify-center mb-20'>
 
-                <div className='w-full md:min-h-screen h-auto flex flex-col items-center justify-center gap-48 relative overflow-hidden'>
+                <div
+                    className='w-full md:min-h-screen h-auto flex flex-col items-center justify-center gap-48 relative overflow-hidden'
+                    style={{
+                        backgroundImage: "url('/bg/texture.jpg')",
+                        backgroundRepeat: "no-repeat",
+                    }}
+                >
                     <Image src={'/bg/sphere.svg'} alt='sphere' width={384} height={384} className='absolute -left-10 top-40 object-cover h-64 w-72 border-4 border-white rounded-md' priority={true} />
                     <Image src={'/bg/sphere.svg'} alt='sphere' width={384} height={384} className='absolute -right-10 top-40 object-cover h-64 w-72 border-4 border-white rounded-md' priority={true} />
 
