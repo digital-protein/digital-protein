@@ -1,6 +1,8 @@
-import type { AppProps } from 'next/app'
-import { Metadata } from 'next'
-import '../app/globals.css'
+import type { AppProps } from 'next/app';
+import { Metadata } from 'next';
+import '../app/globals.css';
+
+import { UserProvider } from '../context/userContext';
 
 export const metadata: Metadata = {
     title: "Digital Protein | 2025",
@@ -10,7 +12,9 @@ export const metadata: Metadata = {
 function MyApp({ Component, pageProps }: AppProps) {
     return (
         <>
-            <Component {...pageProps} />
+            <UserProvider>
+                <Component {...pageProps} />
+            </UserProvider>
         </>
     )
 }
