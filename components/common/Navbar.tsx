@@ -23,7 +23,7 @@ const Navbar = () => {
 
             <div className='flex flex-row justify-between items-center w-10/12 h-full'>
                 <Link href={'/'}>
-                    <Image src="/logo/digital-protein.svg" alt="digital protein logo" width={200} height={50} className="w-20 h-auto cursor-pointer" />
+                    <Image src="/logo/digital-protein.svg" alt="digital protein logo" width={200} height={50} className="w-52 h-auto cursor-pointer" />
                 </Link>
 
                 <div className="lg:hidden flex items-center text-white">
