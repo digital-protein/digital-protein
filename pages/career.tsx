@@ -1,11 +1,18 @@
-import React from 'react';
+import React, { useContext, useEffect } from 'react';
 import Head from 'next/head';
 import Image from 'next/image';
 
 import Navbar from '@/components/common/Navbar';
 import Footer from '@/components/common/Footer';
+import { UserContext } from '@/context/userContext';
 
 const Career = () => {
+    const { setCurrentTab } = useContext(UserContext);
+
+    useEffect(() => {
+        setCurrentTab('career');
+    }, [setCurrentTab]);
+
     return (
         <div className='min-h-screen bg-black'>
 

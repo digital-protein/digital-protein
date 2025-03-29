@@ -37,24 +37,35 @@ const company = () => {
 
             <Navbar />
 
-            <div className='w-full h-auto flex flex-col gap-6 items-center justify-center mt-10 mb-20'>
+            <div className='w-full h-auto flex flex-col gap-6 items-center justify-center mb-20'>
 
-                <div className='md:w-10/12 w-11/12 h-auto flex md:flex-row flex-col items-center justify-center gap-8'>
-                    <div className='md:w-1/2 w-full h-auto flex flex-col items-start justify-center md:gap-10 gap-6'>
-                        <h1 className='md:text-4xl text-xl font-bold text-white'>Revolutionizing Digital Solutions</h1>
-                        <p className='text-lg text-[#818181] text-justify'>
-                            At Digital Protein, we blend innovation and technology to craft powerful digital experiences.
-                            From cutting-edge web solutions to scalable cloud architectures, we help businesses thrive in
-                            the digital era. Join us in shaping the future of technology.
-                        </p>
-                        <button
-                            className='px-6 py-1.5 transition-all bg-transparent hover:bg-[#fff] text-[#fff] hover:text-black text-semibold border-2 border-[#fff] rounded-full'
-                        >
-                            Explore More
-                        </button>
+                <div
+                    className='w-full md:min-h-screen h-auto flex flex-col items-center justify-center gap-48 relative overflow-hidden'
+                    style={{
+                        backgroundImage: "url('/bg/texture.jpg')",
+                        backgroundRepeat: "no-repeat",
+                    }}
+                >
+                    <Image src={'/bg/sphere.svg'} alt='sphere' width={384} height={384} className='absolute -left-10 top-40 object-cover h-64 w-72 border-4 border-white rounded-md' priority={true} />
+                    <Image src={'/bg/sphere.svg'} alt='sphere' width={384} height={384} className='absolute -right-10 top-40 object-cover h-64 w-72 border-4 border-white rounded-md' priority={true} />
+
+                    <div className='flex flex-col gap-4 items-center justify-center text-center w-11/12 mt-32 text-white'>
+                        <div className='md:text-xl text-base font-normal'>Our Services</div>
+                        <div className='md:text-6xl text-3xl font-bold'>
+                            Empower. Transform. <span className='bg-clip-text text-transparent bg-gradient-to-r from-[#175398] to-[#154e8f]'>Succeed</span>
+                        </div>
+                        <div className='md:w-2/3 w-full md:text-lg text-base'>
+                            Explore our wide range of services designed to drive innovation, enhance efficiency, and deliver exceptional results. Let us help you achieve your goals with cutting-edge solutions tailored to your needs.
+                        </div>
                     </div>
-                    <div className='w-1/2 h-auto flex items-center justify-center'>
-                        <Image src={'/bg/sphere.svg'} alt='sphere' width={550} height={550} priority={true} />
+
+                    <div className='flex flex-row gap-4'>
+                        <div className='py-2 px-5 cursor-pointer serviceCard'>Mobile App Developer</div>
+                        <div className='py-2 px-5 cursor-pointer serviceCard'>AI/ML Engineer</div>
+                        <div className='py-2 px-5 cursor-pointer serviceCard'>Cloud Engineer</div>
+                        <div className='py-2 px-5 cursor-pointer serviceCard'>DevOps Engineer</div>
+                        <div className='py-2 px-5 cursor-pointer serviceCard'>Database Administrator</div>
+                        <div className='py-2 px-5 cursor-pointer serviceCard'>QA Engineer / Tester</div>
                     </div>
                 </div>
 

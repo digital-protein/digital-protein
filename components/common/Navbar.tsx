@@ -32,14 +32,14 @@ const Navbar = () => {
                 </div>
 
                 <nav className="text-white text-center lg:flex hidden lg:w-auto lg:space-x-8 justify-between items-center w-[55%]">
-                    <Link href={'/services'} className={`${currentTab === 'service' && 'text-[#175398]'} cursor-pointer hover:text-[#175398]`}>Services</Link>
+                    <Link href={'/services'} className={`${currentTab === 'services' && 'text-[#175398]'} cursor-pointer hover:text-[#175398]`}>Services</Link>
                     <Link href={'/company'} className={`${currentTab === 'company' && 'text-[#175398]'} cursor-pointer hover:text-[#175398]`}>Company</Link>
                     <Link href={'/portfolio'} className={`${currentTab === 'portfolio' && 'text-[#175398]'} cursor-pointer hover:text-[#175398]`}>Portfolio</Link>
                     <Link href={'/career'} className={`${currentTab === 'career' && 'text-[#175398]'} cursor-pointer hover:text-[#175398]`}>Career</Link>
                 </nav>
 
                 <Link href='/contact' className="hidden lg:block">
-                    <Button variant={'default'} className="relative text-base font-normal">
+                    <Button variant={currentTab === 'contact' ? 'manual' : 'default'} className="relative text-base font-normal">
                         Schedule a Call
                     </Button>
                 </Link>
@@ -65,7 +65,7 @@ const Navbar = () => {
                     </Button>
 
                     <Button
-                        variant={currentTab === 'service' ? 'manual' : 'outline'}
+                        variant={currentTab === 'services' ? 'manual' : 'outline'}
                         className='w-full cursor-pointer'
                         onClick={() => { router.push('/services'); setIsActive(!isActive) }}
                     >
