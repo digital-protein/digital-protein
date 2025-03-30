@@ -40,10 +40,10 @@ const ServicePage = () => {
 
             <Navbar />
 
-            <div className='w-full h-auto flex flex-col gap-6 items-center justify-center mb-20'>
+            <div className='w-full h-auto flex flex-col items-center justify-center'>
 
                 <div
-                    className='w-full md:min-h-screen h-auto flex flex-col items-center justify-center gap-48 relative overflow-hidden'
+                    className='w-full md:h-screen h-auto flex flex-col items-center justify-between overflow-hidden relative'
                     style={{
                         backgroundImage: "url('/bg/bg_1.jpg')",
                         backgroundRepeat: "no-repeat",
@@ -51,53 +51,62 @@ const ServicePage = () => {
                         backgroundSize: "100%"
                     }}
                 >
-                    <Image src={'/bg/sphere.svg'} alt='sphere' width={384} height={384} className='absolute -left-10 top-40 object-cover h-64 w-72 border-4 border-white rounded-md' priority={true} />
-                    <Image src={'/bg/sphere.svg'} alt='sphere' width={384} height={384} className='absolute -right-10 top-40 object-cover h-64 w-72 border-4 border-white rounded-md' priority={true} />
 
-                    <div className='flex flex-col gap-4 items-center justify-center text-center w-11/12 mt-32 text-white'>
-                        <div className='md:text-xl text-base font-normal'>Our Services</div>
-                        <div className='md:text-6xl text-3xl font-bold'>
-                            Empower. Transform. <span className='bg-clip-text text-transparent bg-gradient-to-r from-[#175398] to-[#154e8f]'>Succeed</span>
-                        </div>
-                        <div className='md:w-2/3 w-full md:text-lg text-base'>
+                    <Image src={'/bg/header/left-line.svg'} alt='sphere' width={384} height={384} className='md:flex hidden absolute left-0 -top-20 md:w-40 w-12 pt-8 rotate-45' priority={true} />
+                    <Image src={'/bg/header/right-line.svg'} alt='sphere' width={384} height={384} className='md:flex hidden absolute right-0 bottom-0 md:w-44 w-12 pt-8 rotate-45' priority={true} />
+
+                    <div className='pt-32 flex flex-col gap-2 items-center justify-center text-center w-11/12 text-white z-20'>
+                        <div className='md:text-xl text-base font-normal'>Services We Provide</div>
+                        <div className='md:text-7xl text-3xl font-bold pb-5'>Empower. Transform.  <span className='bg-clip-text text-transparent bg-gradient-to-r from-[#175398] to-[#154e8f]'>Succeed</span></div>
+                        <div className='md:w-10/12 w-full md:text-xl text-base'>
                             Explore our wide range of services designed to drive innovation, enhance efficiency, and deliver exceptional results. Let us help you achieve your goals with cutting-edge solutions tailored to your needs.
                         </div>
                     </div>
 
-                    <div className='flex flex-row gap-4'>
-                        <div className='py-2 px-5 cursor-pointer serviceCard'>Mobile App Developer</div>
-                        <div className='py-2 px-5 cursor-pointer serviceCard'>AI/ML Engineer</div>
-                        <div className='py-2 px-5 cursor-pointer serviceCard'>Cloud Engineer</div>
-                        <div className='py-2 px-5 cursor-pointer serviceCard'>DevOps Engineer</div>
-                        <div className='py-2 px-5 cursor-pointer serviceCard'>Database Administrator</div>
-                        <div className='py-2 px-5 cursor-pointer serviceCard'>QA Engineer / Tester</div>
+                    <div className="md:w-10/12 w-full md:h-125 h-64 overflow-hidden rounded-t-2xl z-10 shadow group">
+                        <Image src={`/bg/bg_5.jpg`} alt='about company' width={400} height={300} className="w-full h-full object-cover rounded-t-2xl transition-transform duration-300 ease-in-out group-hover:scale-105" />
                     </div>
+
                 </div>
 
-                <div className='md:w-10/12 w-11/12 h-auto flex flex-col md:gap-0 gap-12 py-24 text-white'>
-                    <div className='w-full flex flex-col'>
-                        <div className='text-blue-600 font-normal mb-2'>Services</div>
-                        <div className='md:text-3xl text-2xl font-semibold mb-4'>What services we provide?</div>
-                    </div>
+                <div className='md:w-10/12 w-11/12 h-auto flex flex-col pb-24 text-white'>
 
-                    <div className='flex flex-col'>
-
-                        {services?.map((service: any, index: any) => (
-                            <div key={index} id={service?.id} className={`w-full h-auto text-white pt-24 flex ${index % 2 === 0 ? "md:flex-row flex-col" : "md:flex-row-reverse flex-col"
-                                } gap-16 items-start cursor-pointer`}>
-                                <Image src={`/bg/bg_3.jpg`} alt='' width={330} height={330} className='md:w-1/2 w-full md:h-96 h-64 object-cover rounded-md shadow-lg' />
-                                <div className='md:w-1/2 w-full flex flex-col md:gap-24 gap-6'>
-                                    <div className='flex flex-col md:gap-6 gap-3 items-start mt-4'>
-                                        <Image src={`/services/icons/${service.icon}`} alt='' width={30} height={30} className='w-12 h-auto' />
-                                        <div className="md:text-3xl text-2xl font-semibold">{service.title}</div>
-                                        <div className="text-sm font-light h-16">{service.description}</div>
-                                    </div>
-                                    <Link href={service.link} className='w-full'>
-                                        <Button variant={'manual'} className='cursor-pointer'>Explore More</Button>
-                                    </Link>
+                    {services?.map((service: any, index: any) => (
+                        <div key={index} id={service?.id} className={`w-full h-auto text-white pt-24 flex ${index % 2 === 0 ? "md:flex-row flex-col" : "md:flex-row-reverse flex-col"
+                            } gap-16 items-start cursor-pointer`}>
+                            <Image src={`/bg/bg_3.jpg`} alt='' width={330} height={330} className='md:w-1/2 w-full md:h-96 h-64 object-cover rounded-md shadow-lg' />
+                            <div className='md:w-1/2 w-full flex flex-col md:gap-24 gap-6'>
+                                <div className='flex flex-col md:gap-6 gap-3 items-start mt-4'>
+                                    <Image src={`/services/icons/${service.icon}`} alt='' width={30} height={30} className='w-12 h-auto' />
+                                    <div className="md:text-3xl text-2xl font-semibold">{service.title}</div>
+                                    <div className="text-sm font-light h-16">{service.description}</div>
                                 </div>
+                                <Link href={service.link} className='w-full'>
+                                    <Button variant={'manual'} className='cursor-pointer'>Explore More</Button>
+                                </Link>
                             </div>
-                        ))}
+                        </div>
+                    ))}
+
+                </div>
+
+                <div className='w-full h-auto flex flex-col items-center justify-center py-24 bg-white text-black'>
+                    <div className='w-full h-auto flex flex-col items-center justify-center gap-24'>
+
+                        <div
+                            className='md:w-10/12 w-full flex flex-col p-8 items-center justify-center text-center rounded-2xl relative overflow-hidden customShadow'
+                            style={{
+                                backgroundImage: "url('/services/banner-light.svg')",
+                                backgroundRepeat: "no-repeat",
+                            }}
+                        >
+
+                            <div className='text-blue-600 font-normal mb-2'>Connect</div>
+                            <div className='md:text-3xl text-xl font-semibold md:mb-4 mb-0'>Unlock your business's true potential with top-tier digital solutions.</div>
+                            <div className='w-auto h-auto'>
+                                <Button variant={'manual'} className='mt-8'>Connect with our Experts</Button>
+                            </div>
+                        </div>
 
                     </div>
                 </div>

@@ -155,3 +155,8 @@ body {
     linear-gradient(to right, #383838 1px, #1c1c1c 1px);
   background-size: 20px 20px;
 }
+
+.customShadow {
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
