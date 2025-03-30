@@ -42,8 +42,10 @@ const Career = () => {
                 <div
                     className='w-full md:min-h-screen h-auto flex flex-col items-center justify-center gap-48 relative overflow-hidden'
                     style={{
-                        backgroundImage: "url('/bg/texture.jpg')",
+                        backgroundImage: "url('/bg/bg_6.jpg')",
                         backgroundRepeat: "no-repeat",
+                        backgroundPosition: "center",
+                        backgroundSize: "100%"
                     }}
                 >
                     <Image src={'/bg/sphere.svg'} alt='sphere' width={384} height={384} className='absolute -left-10 top-40 object-cover h-64 w-72 border-4 border-white rounded-md' priority={true} />

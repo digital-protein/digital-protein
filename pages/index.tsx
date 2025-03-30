@@ -43,11 +43,11 @@ export default function Home() {
 
                 <div className='w-full h-auto flex items-center justify-center pt-32 pb-24'
                     style={{
-                        backgroundImage: "url('/bg/texture.jpg')",
+                        backgroundImage: "url('/bg/bg_3.jpg')",
                         backgroundRepeat: "no-repeat",
                     }}
                 >
-
+                    
                     <Image src={'/about/left-line.svg'} alt='sphere' width={384} height={384} className='absolute left-0 top-20 md:h-96 h-64 md:w-24 w-12 pt-8' priority={true} />
                     <Image src={'/about/right-line.svg'} alt='sphere' width={384} height={384} className='absolute right-0 top-20 md:h-96 h-64 md:w-24 w-12 pt-8' priority={true} />
 
@@ -58,7 +58,7 @@ export default function Home() {
                             <div className='md:text-7xl text-2xl bg-clip-text text-transparent bg-gradient-to-r from-[#175398] to-[#154e8f]'>Global Tech Innovators.</div>
                         </div>
                         <div className='md:w-2/3 w-full md:text-xl text-sm mb-4'>Leverage cutting-edge technology, AI-driven insights, and top-tier nearshore talent to accelerate growth and drive business success with OceanzCloud.</div>
-                        <Button variant={'default'} className="relative px-6 py-5 text-base rounded-md transition-all font-normal">
+                        <Button variant={'manual'} className="relative px-6 py-5 text-base rounded-md transition-all font-normal">
                             Schedule a Call
                         </Button>
 

@@ -51,7 +51,7 @@ const contact = () => {
             <div
                 className='w-full h-auto flex flex-col gap-6 items-center justify-center pb-20 pt-32'
                 style={{
-                    backgroundImage: "url('/bg/texture.jpg')",
+                    backgroundImage: "url('/bg/bg_3.jpg')",
                     backgroundRepeat: "no-repeat",
                 }}
             >
