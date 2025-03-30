@@ -8,6 +8,16 @@ body {
   font-family: "Poppins", serif;
 }
 
+@layer utilities {
+  body {
+    @apply overflow-y-scroll;
+  }
+
+  ::-webkit-scrollbar {
+    width: 0px;
+  }
+}
+
 /* Loader styles */
 .loader {
   width: 150px;
@@ -129,4 +139,19 @@ body {
 
 .serviceCard:active {
   transform: scale(0.95) rotateZ(1.7deg);
+}
+
+.polkaArt {
+  background-color: black;
+  opacity: 0.8;
+  background-image: radial-gradient(#444cf7 0.5px, #242424 0.5px);
+  background-size: 10px 10px;
+}
+
+.linesArt {
+  background-color: #1c1c1c;
+  opacity: 0.8;
+  background-image: linear-gradient(#383838 1px, transparent 1px),
+    linear-gradient(to right, #383838 1px, #1c1c1c 1px);
+  background-size: 20px 20px;
 }
