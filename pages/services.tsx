@@ -6,8 +6,10 @@ import Head from 'next/head';
 import Footer from '@/components/common/Footer';
 import Navbar from '@/components/common/Navbar';
 import { UserContext } from '@/context/userContext';
+import { Button } from '@/components/ui/button';
+import services from '@/components/assets/services';
 
-const services = () => {
+const ServicePage = () => {
     const { setCurrentTab } = useContext(UserContext);
 
     useEffect(() => {
@@ -72,6 +74,34 @@ const services = () => {
                     </div>
                 </div>
 
+                <div className='md:w-10/12 w-11/12 h-auto flex flex-col md:gap-0 gap-12 py-24 text-white'>
+                    <div className='w-full flex flex-col'>
+                        <div className='text-blue-600 font-normal mb-2'>Services</div>
+                        <div className='md:text-3xl text-2xl font-semibold mb-4'>What services we provide?</div>
+                    </div>
+
+                    <div className='flex flex-col'>
+
+                        {services?.map((service: any, index: any) => (
+                            <div key={index} id={service?.id} className={`w-full h-auto text-white pt-24 flex ${index % 2 === 0 ? "md:flex-row flex-col" : "md:flex-row-reverse flex-col"
+                                } gap-16 items-start cursor-pointer`}>
+                                <Image src={`/bg/bg_3.jpg`} alt='' width={330} height={330} className='md:w-1/2 w-full md:h-96 h-64 object-cover rounded-md shadow-lg' />
+                                <div className='md:w-1/2 w-full flex flex-col md:gap-24 gap-6'>
+                                    <div className='flex flex-col md:gap-6 gap-3 items-start mt-4'>
+                                        <Image src={`/services/icons/${service.icon}`} alt='' width={30} height={30} className='w-12 h-auto' />
+                                        <div className="md:text-3xl text-2xl font-semibold">{service.title}</div>
+                                        <div className="text-sm font-light h-16">{service.description}</div>
+                                    </div>
+                                    <Link href={service.link} className='w-full'>
+                                        <Button variant={'manual'} className='cursor-pointer'>Explore More</Button>
+                                    </Link>
+                                </div>
+                            </div>
+                        ))}
+
+                    </div>
+                </div>
+
             </div>
 
             <Footer />
@@ -80,4 +110,4 @@ const services = () => {
     )
 }
 
-export default services
+export default ServicePage
