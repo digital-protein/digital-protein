@@ -37,7 +37,7 @@ const company = () => {
 
             <Navbar />
 
-            <div className='w-full h-auto flex flex-col gap-6 items-center justify-center mb-20'>
+            <div className='w-full h-auto flex flex-col gap-6 items-center justify-center'>
 
                 <div
                     className='w-full md:min-h-screen h-auto flex flex-col items-center justify-center gap-48 relative overflow-hidden'
