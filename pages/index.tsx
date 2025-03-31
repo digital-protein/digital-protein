@@ -131,7 +131,7 @@ export default function Home() {
 
                         <div className='flex flex-row flex-wrap items-center justify-between gap-12 pt-4'>
 
-                            {projects?.slice(0, 2)?.map((industry: any, index: any) => (
+                            {projects?.slice(0, 4)?.map((industry: any, index: any) => (
                                 <div key={index} className="md:w-[47%] w-full h-auto text-white flex flex-col gap-4 items-start cursor-pointer">
                                     <Link href={`/industry/${industry.link}`} className="w-full h-80 overflow-hidden rounded-md shadow group">
                                         <Image src={industry.image} alt='' width={330} height={330} className='w-full object-cover rounded-md shadow-md transition-transform duration-300 ease-in-out group-hover:scale-105' />
