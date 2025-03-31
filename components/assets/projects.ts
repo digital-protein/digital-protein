@@ -43,7 +43,7 @@ const projects = [
     },
     {
         image: "/bg/bg_3.jpg",
-        icon: "logos/event.png",
+        icon: "logos/budget.png",
         title: "Event Management System",
         description: "A comprehensive event management platform with ticketing, attendee registration, and scheduling features for seamless event planning.",
         link: "/projects/event-management-system",

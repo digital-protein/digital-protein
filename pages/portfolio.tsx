@@ -5,6 +5,8 @@ import Image from 'next/image';
 import Navbar from '@/components/common/Navbar';
 import Footer from '@/components/common/Footer';
 import { UserContext } from '@/context/userContext';
+import projects from '@/components/assets/projects';
+import Link from 'next/link';
 
 const Portfolio = () => {
     const { setCurrentTab } = useContext(UserContext);
@@ -37,12 +39,12 @@ const Portfolio = () => {
 
             <Navbar />
 
-            <div className='w-full h-auto flex flex-col gap-6 items-center justify-center mb-20'>
+            <div className='w-full h-auto flex flex-col gap-6 items-center justify-center'>
 
                 <div
                     className='w-full md:min-h-screen h-auto flex flex-col items-center justify-center gap-48 relative overflow-hidden'
                     style={{
-                        backgroundImage: "url('/bg/texture.jpg')",
+                        backgroundImage: "url('/bg/bg_3.jpg')",
                         backgroundRepeat: "no-repeat",
                     }}
                 >
@@ -66,6 +68,32 @@ const Portfolio = () => {
                         <div className='py-2 px-5 cursor-pointer serviceCard'>DevOps Engineer</div>
                         <div className='py-2 px-5 cursor-pointer serviceCard'>Database Administrator</div>
                         <div className='py-2 px-5 cursor-pointer serviceCard'>QA Engineer / Tester</div>
+                    </div>
+                </div>
+
+                <div className='w-full h-auto flex flex-col items-center justify-center bg-black text-white'>
+                    <div className='md:w-10/12 w-11/12 h-auto flex flex-col gap-12 pt-16 pb-24 text-white'>
+                        <div className='w-full flex flex-col'>
+                            <div className='text-blue-600 font-normal mb-2'>Industries</div>
+                            <div className='md:text-3xl font-semibold mb-4'>Industries We Empower with Innovation</div>
+                        </div>
+
+                        <div className='flex flex-row flex-wrap items-center justify-between gap-12'>
+
+                            {projects?.map((industry: any, index: any) => (
+                                <div key={index} className="md:w-[47%] w-full h-auto text-white flex flex-col gap-4 items-start cursor-pointer">
+                                    <Link href={`/industry/${industry.link}`} className="w-full h-80 overflow-hidden rounded-md shadow group">
+                                        <Image src={industry.image} alt='' width={330} height={330} className='w-full object-cover rounded-md shadow-md transition-transform duration-300 ease-in-out group-hover:scale-105' />
+                                    </Link>
+                                    <div className='flex flex-row gap-6 items-center mt-4'>
+                                        <Image src={`/projects/${industry.icon}`} alt='' width={30} height={30} className='w-12 h-auto' />
+                                        <div className="text-base font-semibold">{industry.title}</div>
+                                    </div>
+                                    <div className="text-sm font-light h-16">{industry.description}</div>
+                                </div>
+                            ))}
+
+                        </div>
                     </div>
                 </div>
 
