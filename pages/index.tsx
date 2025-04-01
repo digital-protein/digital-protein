@@ -21,7 +21,6 @@ export default function Home() {
         setCurrentTab('home');
     }, [setCurrentTab]);
 
-
     const toggle = (i: number) => {
         if (selected === i) {
             return setSelected(null);

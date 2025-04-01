@@ -42,14 +42,14 @@ const Portfolio = () => {
             <div className='w-full h-auto flex flex-col gap-6 items-center justify-center'>
 
                 <div
-                    className='w-full md:min-h-screen h-auto flex flex-col items-center justify-center gap-48 relative overflow-hidden'
+                    className='w-full md:min-h-screen h-auto flex flex-col items-center justify-center md:gap-48 gap-24 relative overflow-hidden'
                     style={{
                         backgroundImage: "url('/bg/bg_3.jpg')",
                         backgroundRepeat: "no-repeat",
                     }}
                 >
-                    <Image src={'/bg/sphere.svg'} alt='sphere' width={384} height={384} className='absolute -left-10 top-40 object-cover h-64 w-72 border-4 border-white rounded-md' priority={true} />
-                    <Image src={'/bg/sphere.svg'} alt='sphere' width={384} height={384} className='absolute -right-10 top-40 object-cover h-64 w-72 border-4 border-white rounded-md' priority={true} />
+                    <Image src={'/bg/sphere.svg'} alt='sphere' width={384} height={384} className='md:flex hidden absolute -left-10 top-40 object-cover h-64 w-72 border-4 border-white rounded-md' priority={true} />
+                    <Image src={'/bg/sphere.svg'} alt='sphere' width={384} height={384} className='md:flex hidden absolute -right-10 top-40 object-cover h-64 w-72 border-4 border-white rounded-md' priority={true} />
 
                     <div className='flex flex-col gap-4 items-center justify-center text-center w-11/12 mt-32 text-white'>
                         <div className='md:text-xl text-base font-normal'>Our Services</div>
@@ -61,7 +61,7 @@ const Portfolio = () => {
                         </div>
                     </div>
 
-                    <div className='flex flex-row gap-4'>
+                    <div className='md:w-full w-11/12 flex flex-row flex-wrap items-center justify-center gap-4 md:pb-0 pb-12'>
                         <div className='py-2 px-5 cursor-pointer serviceCard'>Mobile App Developer</div>
                         <div className='py-2 px-5 cursor-pointer serviceCard'>AI/ML Engineer</div>
                         <div className='py-2 px-5 cursor-pointer serviceCard'>Cloud Engineer</div>
@@ -73,9 +73,9 @@ const Portfolio = () => {
 
                 <div className='w-full h-auto flex flex-col items-center justify-center bg-black text-white'>
                     <div className='md:w-10/12 w-11/12 h-auto flex flex-col gap-12 pt-16 pb-24 text-white'>
-                        <div className='w-full flex flex-col'>
+                        <div className='w-full flex flex-col items-center md:text-left text-center'>
                             <div className='text-blue-600 font-normal mb-2'>Industries</div>
-                            <div className='md:text-3xl font-semibold mb-4'>Industries We Empower with Innovation</div>
+                            <div className='md:text-3xl text-2xl font-semibold mb-4'>Industries We Empower with Innovation</div>
                         </div>
 
                         <div className='flex flex-row flex-wrap items-center justify-between gap-12'>
