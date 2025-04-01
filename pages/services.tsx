@@ -55,7 +55,7 @@ const ServicePage = () => {
                     <Image src={'/bg/header/left-line.svg'} alt='sphere' width={384} height={384} className='md:flex hidden absolute left-0 -top-20 md:w-40 w-12 pt-8 rotate-45' priority={true} />
                     <Image src={'/bg/header/right-line.svg'} alt='sphere' width={384} height={384} className='md:flex hidden absolute right-0 bottom-0 md:w-44 w-12 pt-8 rotate-45' priority={true} />
 
-                    <div className='pt-32 flex flex-col gap-2 items-center justify-center text-center w-11/12 text-white z-20'>
+                    <div className='pt-36 flex flex-col gap-2 items-center justify-center text-center w-11/12 text-white z-20'>
                         <div className='md:text-xl text-base font-normal'>Services We Provide</div>
                         <div className='md:text-7xl text-3xl font-bold pb-5'>Empower. Transform.  <span className='bg-clip-text text-transparent bg-gradient-to-r from-[#175398] to-[#154e8f]'>Succeed</span></div>
                         <div className='md:w-10/12 w-full md:text-xl text-base'>

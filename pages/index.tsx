@@ -61,21 +61,21 @@ export default function Home() {
                     }}
                 >
 
-                    <Image src={'/about/left-line.svg'} alt='sphere' width={384} height={384} className='absolute left-0 top-20 md:h-96 h-64 md:w-24 w-12 pt-8' priority={true} />
-                    <Image src={'/about/right-line.svg'} alt='sphere' width={384} height={384} className='absolute right-0 top-20 md:h-96 h-64 md:w-24 w-12 pt-8' priority={true} />
+                    <Image src={'/about/left-line.svg'} alt='sphere' width={384} height={384} className='md:flex hidden absolute left-0 top-20 md:h-96 h-64 md:w-24 w-12 pt-8' priority={true} />
+                    <Image src={'/about/right-line.svg'} alt='sphere' width={384} height={384} className='md:flex hidden absolute right-0 top-20 md:h-96 h-64 md:w-24 w-12 pt-8' priority={true} />
 
-                    <div className='flex flex-col gap-4 items-center justify-center text-center w-10/12 text-white'>
-                        <div className='md:text-xl text-sm font-normal'>Empowering Innovation, Scaling Success.</div>
-                        <div className='md:text-7xl text-xl font-bold'>
+                    <div className='flex flex-col gap-4 items-center justify-center text-center md:w-10/12 w-11/12 text-white'>
+                        <div className='md:text-xl text-base font-normal'>Empowering Innovation, Scaling Success.</div>
+                        <div className='md:text-7xl text-2xl font-bold'>
                             <div>Fast-Track Your Success with</div>
-                            <div className='md:text-7xl text-2xl bg-clip-text text-transparent bg-gradient-to-r from-[#175398] to-[#154e8f]'>Global Tech Innovators.</div>
+                            <div className='md:text-7xl text-3xl bg-clip-text text-transparent bg-gradient-to-r from-[#175398] to-[#154e8f]'>Global Tech Innovators.</div>
                         </div>
-                        <div className='md:w-2/3 w-full md:text-xl text-sm mb-4'>Leverage cutting-edge technology, AI-driven insights, and top-tier nearshore talent to accelerate growth and drive business success with OceanzCloud.</div>
+                        <div className='md:w-2/3 w-full md:text-xl text-base mb-4'>Leverage cutting-edge technology, AI-driven insights, and top-tier nearshore talent to accelerate growth and drive business success with OceanzCloud.</div>
                         <Button variant={'manual'} className="relative px-6 py-5 text-base rounded-md transition-all font-normal">
                             Schedule a Call
                         </Button>
 
-                        <div className='flex flex-row justify-between flex-wrap mt-10'>
+                        <div className='flex flex-row justify-between flex-wrap md:gap-0 gap-6 mt-10'>
                             <Image src={'/bg/sphere.svg'} alt='sphere' width={550} height={550} className='md:w-[22%] w-full h-80 object-cover border-4 border-[#1a1a1a] rounded-lg' priority={true} />
                             <Image src={'/bg/sphere.svg'} alt='sphere' width={550} height={550} className='md:w-[22%] w-full h-80 object-cover border-4 border-[#1a1a1a] rounded-lg' priority={true} />
                             <Image src={'/bg/sphere.svg'} alt='sphere' width={550} height={550} className='md:w-[22%] w-full h-80 object-cover border-4 border-[#1a1a1a] rounded-lg' priority={true} />
@@ -86,9 +86,9 @@ export default function Home() {
 
                 </div>
 
-                <div className='w-full h-auto flex flex-col items-center justify-center pt-24 pb-24 bg-black text-white'>
+                <div className='w-full h-auto flex flex-col items-center justify-center md:pt-24 pt-0 pb-24 bg-black text-white'>
                     <div className='md:w-10/12 w-11/12 h-auto flex flex-col gap-12'>
-                        <div className='w-full flex flex-col'>
+                        <div className='w-full flex flex-col items-center md:text-left text-center'>
                             <div className='text-blue-600 font-normal mb-2'>Our Trusted Partners</div>
                             <div className='md:text-3xl text-2xl font-semibold mb-4'>Companies We've Collaborated With</div>
                         </div>
@@ -124,9 +124,9 @@ export default function Home() {
 
                 <div className='w-full h-auto flex flex-col items-center justify-center bg-black text-white'>
                     <div className='md:w-10/12 w-11/12 h-auto flex flex-col gap-12 pb-24 text-white'>
-                        <div className='w-full flex flex-col'>
+                        <div className='w-full flex flex-col items-center md:text-left text-center'>
                             <div className='text-blue-600 font-normal mb-2'>Industries</div>
-                            <div className='md:text-3xl font-semibold mb-4'>Industries We Empower with Innovation</div>
+                            <div className='md:text-3xl text-2xl font-semibold mb-4'>Industries We Empower with Innovation</div>
                         </div>
 
                         <div className='flex flex-row flex-wrap items-center justify-between gap-12 pt-4'>
@@ -150,30 +150,30 @@ export default function Home() {
 
                 <div className='w-full h-auto flex flex-col items-center justify-center bg-black text-white'>
                     <div className='md:w-10/12 w-11/12 h-auto flex flex-col gap-16 mb-24 text-white'>
-                        <div className='w-full flex flex-col items-center'>
+                        <div className='w-full flex flex-col items-center md:text-left text-center'>
                             <div className='text-blue-600 font-normal mb-2'>Frequently Asked Questions</div>
-                            <div className='text-3xl font-semibold mb-4'>Your Guide to Our Services and Solutions</div>
+                            <div className='md:text-3xl text-2xl font-semibold mb-4'>Your Guide to Our Services and Solutions</div>
                         </div>
 
                         <div className="relative flex flex-row flex-wrap items-start justify-between self-center pb-6">
                             {faqs?.map((item: any, index: any) => (
                                 <div
-                                    className="md:w-[49%] w-full py-5 px-5 my-3 cursor-pointer bg-[#171717] text-white border border-[#2b2b2b] rounded-md faqsCard"
+                                    className="md:w-[49%] w-full md:text-base text-sm py-5 px-5 my-3 cursor-pointer bg-[#171717] text-white border border-[#2b2b2b] rounded-md faqsCard"
                                     key={index}
                                     onClick={() => toggle(index)}
                                 >
                                     <div className="flex items-center justify-between">
-                                        <p className="pr-4 text-base font-normal">{item.que}</p>
+                                        <p className="md:pr-4 pr-0 font-normal">{item.que}</p>
                                         {selected === index ? (
-                                            <CaretUpIcon className='w-6 h-6 transition-all duration-300 rotate-0' />
+                                            <CaretUpIcon className='md:flex hidden w-6 h-6 transition-all duration-300 rotate-0' />
                                         ) : (
-                                            <CaretUpIcon className='w-6 h-6 transition-all duration-300 rotate-180' />
+                                            <CaretUpIcon className='md:flex hidden w-6 h-6 transition-all duration-300 rotate-180' />
                                         )}
                                     </div>
                                     <div
                                         className={
                                             selected === index
-                                                ? "overflow-hidden transition-all md:py-4 py-3 max-h-96 ease-out duration-700 text-base font-light"
+                                                ? "overflow-hidden transition-all md:py-4 py-3 max-h-96 ease-out duration-700 font-light"
                                                 : "overflow-hidden transition-all max-h-0 duration-300"
                                         }
                                     >

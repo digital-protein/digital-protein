@@ -37,7 +37,7 @@ const Career = () => {
 
             <Navbar />
 
-            <div className='w-full h-auto flex flex-col gap-6 items-center justify-center mb-20'>
+            <div className='w-full h-auto flex flex-col gap-6 items-center justify-center'>
 
                 <div
                     className='w-full md:min-h-screen h-auto flex flex-col items-center justify-center gap-48 relative overflow-hidden'
@@ -63,11 +63,11 @@ const Career = () => {
 
                     <div className='flex flex-row gap-4'>
                         <div className='py-2 px-5 cursor-pointer serviceCard'>Mobile App Developer</div>
+                        <div className='py-2 px-5 cursor-pointer serviceCard'>Software Developer</div>
+                        <div className='py-2 px-5 cursor-pointer serviceCard'>UI/UX Designer</div>
                         <div className='py-2 px-5 cursor-pointer serviceCard'>AI/ML Engineer</div>
                         <div className='py-2 px-5 cursor-pointer serviceCard'>Cloud Engineer</div>
                         <div className='py-2 px-5 cursor-pointer serviceCard'>DevOps Engineer</div>
-                        <div className='py-2 px-5 cursor-pointer serviceCard'>Database Administrator</div>
-                        <div className='py-2 px-5 cursor-pointer serviceCard'>QA Engineer / Tester</div>
                     </div>
                 </div>
 
