@@ -73,7 +73,7 @@ const ServicePage = () => {
                         </div>
                     </div>
 
-                    <div className="md:w-10/12 w-11/12 md:h-125 h-64 overflow-hidden rounded-t-2xl z-10 shadow group">
+                    <div className="md:w-10/12 w-11/12 md:h-125 h-72 overflow-hidden rounded-t-2xl z-10 shadow group">
                         <Image src={`/bg/bg_5.jpg`} alt='about company' width={400} height={300} className="w-full h-full object-cover rounded-t-2xl transition-transform duration-300 ease-in-out group-hover:scale-105" />
                     </div>
 
