@@ -40,7 +40,7 @@ const Navbar = () => {
                     </nav>
 
                     <Link href='/contact' className="hidden lg:block">
-                        <Button variant={currentTab === 'contact' ? 'manual' : 'default'} className="relative text-base font-normal">
+                        <Button variant={currentTab === 'contact' ? 'outline' : 'manual'} className="relative text-base font-normal">
                             Schedule a Call
                         </Button>
                     </Link>
