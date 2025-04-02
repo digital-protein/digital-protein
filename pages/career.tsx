@@ -48,16 +48,14 @@ const Career = () => {
                         backgroundSize: "100%"
                     }}
                 >
-                    <Image src={'/bg/sphere.svg'} alt='sphere' width={384} height={384} className='absolute -left-10 top-40 object-cover h-64 w-72 border-4 border-white rounded-md' priority={true} />
-                    <Image src={'/bg/sphere.svg'} alt='sphere' width={384} height={384} className='absolute -right-10 top-40 object-cover h-64 w-72 border-4 border-white rounded-md' priority={true} />
 
                     <div className='flex flex-col gap-4 items-center justify-center text-center w-11/12 mt-32 text-white'>
-                        <div className='md:text-xl text-base font-normal'>Our Services</div>
-                        <div className='md:text-6xl text-3xl font-bold'>
-                            Empower. Transform. <span className='bg-clip-text text-transparent bg-gradient-to-r from-[#175398] to-[#154e8f]'>Succeed</span>
+                        <div className='md:text-xl text-base font-normal'>Join Our Team</div>
+                        <div className='md:text-7xl text-3xl font-bold'>
+                            Innovate. Grow. <span className='bg-clip-text text-transparent bg-gradient-to-r from-[#175398] to-[#154e8f]'>Thrive</span>
                         </div>
                         <div className='md:w-2/3 w-full md:text-lg text-base'>
-                            Explore our wide range of services designed to drive innovation, enhance efficiency, and deliver exceptional results. Let us help you achieve your goals with cutting-edge solutions tailored to your needs.
+                            Be a part of Digital Protein and shape the future with cutting-edge technology. We’re looking for passionate individuals ready to drive innovation, challenge the status quo, and build impactful solutions. Explore exciting career opportunities with us.
                         </div>
                     </div>
 

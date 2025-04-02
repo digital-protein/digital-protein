@@ -66,7 +66,7 @@ const Portfolio = () => {
                             Empower. Transform. <span className='bg-clip-text text-transparent bg-gradient-to-r from-[#175398] to-[#154e8f]'>Succeed</span>
                         </div>
                         <div className='md:w-2/3 w-full md:text-lg text-base'>
-                            Explore our wide range of services designed to drive innovation, enhance efficiency, and deliver exceptional results. Let us help you achieve your goals with cutting-edge solutions tailored to your needs.
+                            Explore our portfolio of cutting-edge digital solutions crafted to drive success. From dynamic websites to powerful applications, our work showcases innovation, creativity, and technical expertise. Let our projects speak for themselves.
                         </div>
                     </div>
 
