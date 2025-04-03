@@ -12,6 +12,7 @@ import Link from 'next/link';
 import projects from '@/components/assets/projects';
 import { CaretUpIcon } from '@radix-ui/react-icons';
 import { faqs } from '@/components/assets/faqs';
+import services from '@/components/assets/services';
 
 export default function Home() {
     const { setCurrentTab } = useContext(UserContext);
@@ -118,6 +119,29 @@ export default function Home() {
                                 <Image src={'/bg/sphere.svg'} alt='company icon' width={120} height={120} className='w-44' />
                             </div>
                         </div>
+                    </div>
+                </div>
+
+                <div className='w-full h-auto flex flex-col items-center justify-center bg-black text-white'>
+                    <div className='md:w-10/12 w-11/12 h-auto flex flex-col pb-24 text-white'>
+
+                        <div className='w-full flex flex-col items-center md:text-left text-center pb-12'>
+                            <div className='text-blue-600 font-normal mb-2'>Industries</div>
+                            <div className='md:text-3xl text-2xl font-semibold mb-4'>Industries We Empower with Innovation</div>
+                        </div>
+
+                        <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6'>
+
+                            {services?.map((service: any, index: any) => (
+                                <Link href={service.link} key={index} className="w-full h-auto bg-[#171717] text-white flex flex-col gap-4 items-start p-8 serviceCard">
+                                    <Image src={`/services/icons/${service.icon}`} alt='' width={30} height={30} className='w-12 h-auto' />
+                                    <div className="text-base font-semibold">{service.title}</div>
+                                    <div className="text-sm font-light">{service.description}</div>
+                                </Link>
+                            ))}
+
+                        </div>
+
                     </div>
                 </div>
 
